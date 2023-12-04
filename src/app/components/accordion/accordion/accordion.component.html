@@ -1,0 +1,10 @@
+<div *ngFor="let item of data; let i = index" class="ts-accordion" [ngClass]="[(rounded ? 'rounded' : 'not-rounded')]">
+  <ng-content></ng-content>
+  <div class="ts-accordion_container" (click)="openDescription(i)">
+    <h3 >{{item.title}}</h3>
+    <span class="ts-accordion_container-arrow" [ngClass]="isOpened === i ? 'rotate' : ''"></span>
+  </div>
+  <div class="ts-accordion_desc">
+    <p [ngClass]="isOpened === i ? 'opened' : 'closed'">{{item.text}}</p>
+  </div>
+</div>
