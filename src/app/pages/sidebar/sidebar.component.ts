@@ -45,4 +45,8 @@ export class SidebarComponent {
     console.log(section)
     this.section = section;
   }
+
+  public setButton(selectedValue: any): void {
+    console.log(selectedValue)
+  }
 }

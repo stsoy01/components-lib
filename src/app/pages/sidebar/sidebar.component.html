@@ -1,13 +1,21 @@
 <div class="ts-sidebar">
-  <div class="ts-sidebar_list">
-    <ul>
-      <li (click)="selectSection('button')">Buttons</li>
-      <li (click)="selectSection('accordion')">Accordion</li>
+  <div class="ts-sidebar_leftbox">
+    <div>
+      <a routerLink="" class="ts-sidebar_logo"></a>
+      <span style="display: inline-block; font-weight: 600">by Sergey Tsoy</span>
+    </div>
+    <ul class="ts-sidebar_leftbox-list">
+      <li (click)="selectSection('button')" class="ts-sidebar_leftbox-item">Buttons</li>
+      <li (click)="selectSection('accordion')" class="ts-sidebar_leftbox-item">Accordion</li>
     </ul>
   </div>
-  <ul [ngSwitch]="section">
+  <div [ngSwitch]="section" style="width: 1400px; margin: 20px auto; padding: 0 50px">
     <div *ngSwitchCase="'button'">
       <div>
+        <select>
+          <option value="outline">outline</option>
+          <option value="primary">primary</option>
+        </select>
         <ts-button appearance="outline"
                    icon="fa fa-battery-quarter"
                    [size]="'m'"
@@ -29,9 +37,9 @@
     </div>
     <div *ngSwitchCase="'accordion'">
       <div style="margin-bottom: 5px">
-          <ts-accordion [data]="content"
-                        [rounded]="true">
-          </ts-accordion>
+        <ts-accordion [data]="content"
+                      [rounded]="true">
+        </ts-accordion>
       </div>
       <div>
         <ts-accordion [data]="content2"
@@ -39,5 +47,5 @@
         </ts-accordion>
       </div>
     </div>
-  </ul>
+  </div>
 </div>
