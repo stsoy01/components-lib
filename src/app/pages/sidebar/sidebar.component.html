@@ -10,40 +10,31 @@
     </ul>
   </div>
   <div [ngSwitch]="section" style="width: 1400px; margin: 20px auto; padding: 0 50px">
+    <ts-header></ts-header>
     <div *ngSwitchCase="'button'">
       <div>
         <select>
           <option value="outline">outline</option>
           <option value="primary">primary</option>
         </select>
-        <ts-button appearance="outline"
-                   icon="fa fa-battery-quarter"
-                   [size]="'m'"
-                   (click)="showMessage('Button with size `S`')"
-                   [disabled]="false">It`s size 'S'
+        <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
+          (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
         </ts-button>
-        <ts-button appearance="primary"
-                   [size]="'m'"
-                   (click)="showMessage('Button with size `M`')"
-                   [disabled]="false">It`s size 'M' without icon
+        <ts-button appearance="primary" [size]="'m'" (click)="showMessage('Button with size `M`')"
+          [disabled]="false">It`s size 'M' without icon
         </ts-button>
-        <ts-button appearance="accent"
-                   icon="fa fa-address-book"
-                   [size]="'l'"
-                   (click)="showMessage('Button with size `L`')"
-                   [disabled]="false">It`s 'L' size but width can be extended
+        <ts-button appearance="accent" icon="fa fa-address-book" [size]="'l'"
+          (click)="showMessage('Button with size `L`')" [disabled]="false">It`s 'L' size but width can be extended
         </ts-button>
       </div>
     </div>
     <div *ngSwitchCase="'accordion'">
       <div style="margin-bottom: 5px">
-        <ts-accordion [data]="content"
-                      [rounded]="true">
+        <ts-accordion [data]="content" [rounded]="true">
         </ts-accordion>
       </div>
       <div>
-        <ts-accordion [data]="content2"
-                      [rounded]="false">
+        <ts-accordion [data]="content2" [rounded]="false">
         </ts-accordion>
       </div>
     </div>
