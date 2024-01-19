@@ -1,0 +1,31 @@
+<div class="ts-calendar">
+  <div class="ts-calendar__header">
+    <button class="ts-calendar__header-prev ts-calendar__header-btn" (click)="setPrevMonth()"></button>
+    <div>
+      <span class="ts-calendar__header-month">{{months[currentMonth] + ' ' }}</span>
+      <span class="ts-calendar__header-year">{{intermediateYear}}</span>
+    </div>
+    <button class="ts-calendar__header-next ts-calendar__header-btn" (click)="setNextMonth()"></button>
+  </div>
+  <div class="ts-calendar__body">
+    <div [ngStyle]="{width: '252px'}">
+      <ul class="ts-calendar__body-heading">
+        <li class="ts-calendar__body-caption">{{'Пн'}}</li>
+        <li class="ts-calendar__body-caption">{{'Вт'}}</li>
+        <li class="ts-calendar__body-caption">{{'Ср'}}</li>
+        <li class="ts-calendar__body-caption">{{'Чт'}}</li>
+        <li class="ts-calendar__body-caption">{{'Пт'}}</li>
+        <li class="ts-calendar__body-caption">{{'Сб'}}</li>
+        <li class="ts-calendar__body-caption">{{'Вск'}}</li>
+      </ul>
+      <ul style="display: flex; flex-wrap: wrap">
+        <li *ngFor="let day of mothDaysArr; let i = index;"
+            class="ts-calendar__body-day"
+            [ngStyle]="{color: day.status === 'next' ? '#a7a7a7' : 'black'}"
+            [ngClass]="selectedDay === i ? 'colorMe' : ''"
+            (click)="getDay(day, i)">{{day?.day}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

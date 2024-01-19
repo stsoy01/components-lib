@@ -1,0 +1,83 @@
+.ts-calendar {
+  width: 252px;
+  user-select: none;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-prev {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
+    &-next {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    &-btn {
+      padding: 0 4px;
+      width: 10px;
+      height: 10px;
+      border: solid #526ed3;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+    }
+
+    &-month {
+      font-weight: 600;
+    }
+
+    &-year {
+      font-weight: 700;
+      color: #526ed3;
+    }
+  }
+
+  &__body {
+    &-heading {
+      display: flex;
+      margin-top: 20px;
+      height: 36px;
+      font-size: 13px;
+      color: var(--light-grey)
+    }
+
+    &-caption {
+      width: 36px;
+      text-align: center;
+    }
+
+    &-day {
+      display: inline-block;
+      width: 36px;
+      padding: 10px 0;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    &-day:hover {
+      background: rgba(22, 75, 255, 0.7);;
+      cursor: pointer;
+      border-radius: 30%;
+    }
+  }
+
+
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.colorMe {
+  color: var(--white_color) !important;
+  background: rgba(22, 75, 255, 0.7);;
+  cursor: pointer;
+  border-radius: 30%;
+}
+
+
+

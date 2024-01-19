@@ -17,11 +17,11 @@ export class AccordionComponent {
   public data: AccordionData[] = []
 
   @Input()
-  public rounded =  false;
+  public rounded = false;
 
   public isOpened: number | undefined;
 
   public openDescription(index: number): void {
-    (this.isOpened === index) ? this.isOpened = 222 : this.isOpened = index;
+    this.isOpened = index ?? undefined
   }
 }

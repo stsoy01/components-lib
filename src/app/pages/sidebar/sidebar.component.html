@@ -1,22 +1,20 @@
-<div class="ts-sidebar">
-  <div class="ts-sidebar_leftbox">
+<div class="tsSidebar">
+  <div class="tsSidebar_leftbox">
     <div>
-      <a routerLink="" class="ts-sidebar_logo"></a>
-      <span style="display: inline-block; font-weight: 600">by Sergey Tsoy</span>
+      <a routerLink="" class="tsSidebar_logo"></a>
+      <span style="display: inline-block">by <b>Sergey Tsoy</b></span>
     </div>
-    <ul class="ts-sidebar_leftbox-list">
-      <li (click)="selectSection('button')" class="ts-sidebar_leftbox-item">Buttons</li>
-      <li (click)="selectSection('accordion')" class="ts-sidebar_leftbox-item">Accordion</li>
+    <ul class="tsSidebar_leftbox-list">
+      <li (click)="selectSection('button')" class="tsSidebar_leftbox-item">Buttons</li>
+      <li (click)="selectSection('accordion')" class="tsSidebar_leftbox-item">Accordion</li>
+      <li (click)="selectSection('calendar')" class="tsSidebar_leftbox-item">Calendar</li>
     </ul>
   </div>
-  <div [ngSwitch]="section" style="width: 1400px; margin: 20px auto; padding: 0 50px">
+  <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%">
     <ts-header></ts-header>
-    <div *ngSwitchCase="'button'">
+    <ts-header></ts-header>
+    <div *ngSwitchCase="'button'" class="tsSidebar_rightbox-section">
       <div>
-        <select>
-          <option value="outline">outline</option>
-          <option value="primary">primary</option>
-        </select>
         <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
           (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
         </ts-button>
@@ -28,7 +26,7 @@
         </ts-button>
       </div>
     </div>
-    <div *ngSwitchCase="'accordion'">
+    <div *ngSwitchCase="'accordion'" class="tsSidebar_rightbox-section">
       <div style="margin-bottom: 5px">
         <ts-accordion [data]="content" [rounded]="true">
         </ts-accordion>
@@ -38,5 +36,9 @@
         </ts-accordion>
       </div>
     </div>
+    <div *ngSwitchCase="'calendar'" class="tsSidebar_rightbox-section">
+      <ts-calendar></ts-calendar>
+    </div>
   </div>
+
 </div>

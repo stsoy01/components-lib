@@ -17,7 +17,7 @@ export class SidebarComponent {
     {
       title: 'Canada',
       text: 'Canada is a country in North America. Its ten provinces and three territories extend from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean, making it the world\'s second-largest country by total area, with the world\'s longest coastline. Its border with the United States is the world\'s longest international land border. The country is characterized by a wide range of both meteorologic and geological regions. It is a sparsely inhabited country of 40 million people, the vast majority residing south of the 55th parallel in urban areas. Canada\'s capital is Ottawa and its three largest metropolitan areas are Toronto, Montreal, and Vancouver.'
-    }
+    },
   ]
 
   public content2: AccordionData[] = [
@@ -39,7 +39,7 @@ export class SidebarComponent {
     document.body.classList.toggle('dark-theme')
   }
 
-  public section: string = 'button';
+  public section: string = 'calendar';
 
   public selectSection(section: string): void {
     console.log(section)

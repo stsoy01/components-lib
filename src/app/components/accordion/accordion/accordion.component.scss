@@ -28,7 +28,7 @@ h3 {
     cursor: pointer;
 
     &-arrow {
-      transform: rotate(225deg);
+      transform: rotate(222deg);
       display: block;
       width: 10px;
       height: 10px;
@@ -44,6 +44,7 @@ h3 {
 }
 
 .rotate {
+  margin: 4px 0 0 0;
   transform: rotate(46deg);
   transition: .4s;
 }
