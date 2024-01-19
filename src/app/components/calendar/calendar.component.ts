@@ -29,7 +29,7 @@ export class CalendarComponent implements OnInit {
   }
   public monthsDays: any = {
     0: 31,
-    1: 29,
+    1: new Date(new Date().getFullYear(), 2, 0).getDate(),
     2: 31,
     3: 30,
     4: 31,
