@@ -72,18 +72,16 @@ button:hover {
   cursor: pointer;
 }
 
-.colorMe {
-  color: var(--white_color) !important;
-  background: rgba(22, 75, 255, 0.7);;
-  cursor: pointer;
-  border-radius: 30%;
-}
-
-
 .holiday {
   color: red !important;
 }
 
 .smoothHoliday {
   color: #ff7d7d !important;
+}
+.colorMe {
+  color: var(--white_color) !important;
+  background: rgba(22, 75, 255, 0.7);;
+  cursor: pointer;
+  border-radius: 30%;
 }

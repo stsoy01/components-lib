@@ -70,11 +70,13 @@ export class CalendarComponent implements OnInit {
 
     // Добавление дней ТЕКУЩЕГО месяца
     let mainDays = 1
+    let holiday;
     while (mainDays < this.monthsDays[this.currentMonth] + 1) {
+      holiday = new Date(`${this.intermediateYear}.${this.currentMonth + 1}.${mainDays}`).getDay();
       this.mothDaysArr.push({
         day: mainDays++,
         status: 'current',
-        type: new Date(`${this.intermediateYear}.${this.currentMonth + 1}.${mainDays}`).getDay()
+        type: holiday
       })
     }
 
@@ -87,7 +89,7 @@ export class CalendarComponent implements OnInit {
         type: new Date(`${this.intermediateYear}.${this.currentMonth + 2}.${nextDays - 1}`).getDay()
       })
     }
-    console.log(this.mothDaysArr)
+    // console.log(this.mothDaysArr)
   }
 
   public setPrevMonth(): void {
