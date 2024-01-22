@@ -56,6 +56,9 @@ export class CalendarComponent implements OnInit {
     this.mothDaysArr.length = 0;
     let dayMonthIndex = new Date(`${this.intermediateYear}.${this.currentMonth + 1}.1`).getDay()
     let prevDays = this.monthsDays[this.currentMonth - 1] ?? this.monthsDays[0];
+    // console.log(prevDays)
+    // console.log(new Date(this.intermediateYear, this.currentMonth - 1 ?? 11, prevDays).getDay())
+    // console.log(new Date(this.intermediateYear, this.ci))
 
     // Добавление дней ПРЕДШЕСТВУЮЩЕГО месяца текущему
     while (dayMonthIndex !== 1) {
@@ -65,7 +68,11 @@ export class CalendarComponent implements OnInit {
       } else {
         dayMonthIndex--;
       }
-      this.mothDaysArr.push({day: ((prevDays - (dayMonthIndex - 1))), status: 'prev'})
+      this.mothDaysArr.push({
+        day: ((prevDays - (dayMonthIndex - 1))),
+        status: 'prev',
+        type: new Date(this.intermediateYear, this.currentMonth - 1 ?? 11, ((prevDays - (dayMonthIndex - 1)))).getDay()
+      })
     }
 
     // Добавление дней ТЕКУЩЕГО месяца
