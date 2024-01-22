@@ -37,7 +37,7 @@
       </div>
     </div>
     <div *ngSwitchCase="'calendar'" class="tsSidebar_rightbox-section">
-      <ts-calendar></ts-calendar>
+      <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
     </div>
   </div>
 

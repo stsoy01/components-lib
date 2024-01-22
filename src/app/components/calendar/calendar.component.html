@@ -21,8 +21,12 @@
       <ul style="display: flex; flex-wrap: wrap">
         <li *ngFor="let day of mothDaysArr; let i = index;"
             class="ts-calendar__body-day"
-            [ngStyle]="{color: day.status === 'next' ? '#a7a7a7' : 'black'}"
-            [ngClass]="selectedDay === i ? 'colorMe' : ''"
+            [ngStyle]="{color: day.status === 'next' || day.status === 'prev' ? '#a7a7a7' : 'black'}"
+            [ngClass]="[
+            selectedDay === i ? 'colorMe' : '',
+            day?.type === 0 || day?.type === 6 ? 'holiday' : '',
+            (day?.type === 0 || day?.type === 6) && (day?.status === 'next' || day?.status === 'prev') ? 'smoothHoliday' : ''
+            ]"
             (click)="getDay(day, i)">{{day?.day}}
         </li>
       </ul>

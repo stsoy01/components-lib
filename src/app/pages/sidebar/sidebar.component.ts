@@ -49,4 +49,8 @@ export class SidebarComponent {
   public setButton(selectedValue: any): void {
     console.log(selectedValue)
   }
+
+  public selectDay(day: any): void {
+    console.log(new Date(day).toLocaleDateString())
+  }
 }
