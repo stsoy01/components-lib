@@ -18,12 +18,13 @@
     }
 
     &-btn {
+      display: inline-block;
       padding: 0 4px;
       width: 10px;
       height: 10px;
+      background-color: inherit;
       border: solid #526ed3;
       border-width: 0 2px 2px 0;
-      display: inline-block;
     }
 
     &-month {
@@ -33,6 +34,10 @@
     &-year {
       font-weight: 700;
       color: #526ed3;
+    }
+
+    &-year:hover {
+      cursor: pointer;
     }
   }
 
@@ -59,14 +64,13 @@
     }
 
     &-day:hover {
-      background: rgba(22, 75, 255, 0.7);;
+      background: rgba(22, 75, 255, 0.7);
+      ;
       cursor: pointer;
       border-radius: 30%;
       color: var(--white_color) !important;
     }
   }
-
-
 }
 
 button:hover {
@@ -83,7 +87,8 @@ button:hover {
 
 .colorMe {
   color: var(--white_color) !important;
-  background: rgba(22, 75, 255, 0.7);;
+  background: rgba(22, 75, 255, 0.7);
+  ;
   cursor: pointer;
   border-radius: 30%;
 }

@@ -3,7 +3,7 @@
     <button class="ts-calendar__header-prev ts-calendar__header-btn" (click)="setPrevMonth()"></button>
     <div>
       <span class="ts-calendar__header-month">{{months[currentMonth] + ' ' }}</span>
-      <span class="ts-calendar__header-year">{{intermediateYear}}</span>
+      <span class="ts-calendar__header-year" (click)="showYears()">{{intermediateYear}}</span>
     </div>
     <button class="ts-calendar__header-next ts-calendar__header-btn" (click)="setNextMonth()"></button>
   </div>

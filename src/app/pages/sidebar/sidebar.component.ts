@@ -1,13 +1,19 @@
-import {Component} from "@angular/core";
-import {AccordionData} from "../../components/accordion/accordion/accordion.component";
+import { Component } from "@angular/core";
+import { AccordionData } from "../../components/accordion/accordion/accordion.component";
+
+
+type SwitcCases = string;
 
 @Component({
   selector: 'ts-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
+
 })
 
 export class SidebarComponent {
+
+  public section: SwitcCases = 'checkbox';
 
   public content: AccordionData[] = [
     {
@@ -31,6 +37,7 @@ export class SidebarComponent {
     },
   ]
 
+
   public showMessage(message: string): void {
     alert(message)
   }
@@ -38,8 +45,6 @@ export class SidebarComponent {
   public switchDarkMode(): void {
     document.body.classList.toggle('dark-theme')
   }
-
-  public section: string = 'calendar';
 
   public selectSection(section: string): void {
     console.log(section)
@@ -53,4 +58,12 @@ export class SidebarComponent {
   public selectDay(day: any): void {
     console.log(new Date(day).toLocaleDateString())
   }
+
+  public isHired(data: any): void {
+    console.log(data);
+
+  }
+
+
+
 }

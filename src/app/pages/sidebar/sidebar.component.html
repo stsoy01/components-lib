@@ -8,10 +8,11 @@
       <li (click)="selectSection('button')" class="tsSidebar_leftbox-item">Buttons</li>
       <li (click)="selectSection('accordion')" class="tsSidebar_leftbox-item">Accordion</li>
       <li (click)="selectSection('calendar')" class="tsSidebar_leftbox-item">Calendar</li>
+      <li (click)="selectSection('checkbox')" class="tsSidebar_leftbox-item">Checkbox</li>
+
     </ul>
   </div>
   <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%">
-    <ts-header></ts-header>
     <ts-header></ts-header>
     <div *ngSwitchCase="'button'" class="tsSidebar_rightbox-section">
       <div>
@@ -38,6 +39,10 @@
     </div>
     <div *ngSwitchCase="'calendar'" class="tsSidebar_rightbox-section">
       <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
+    </div>
+    <div *ngSwitchCase="'checkbox'" class="tsSidebar_rightbox-section">
+      <ts-checkbox [label]="'hired'" (onChecked)="isHired($event)"></ts-checkbox>
+      <ts-checkbox [label]="'married'" [disabled]="true"></ts-checkbox>
     </div>
   </div>
 

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 
 @Component({
   selector: 'ts-calendar',
@@ -139,5 +139,10 @@ export class CalendarComponent implements OnInit {
     if (day.status === 'current') {
       this.onSelect.emit(`${this.intermediateYear}.${this.currentMonth + 1}.${day.day}`)
     }
+  }
+
+  public showYears(): void {
+    console.log('years');
+    
   }
 }

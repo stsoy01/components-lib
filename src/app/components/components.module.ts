@@ -1,17 +1,22 @@
-import {NgModule} from "@angular/core";
-import {ButtonComponent} from "./button/button/button.component";
-import {CommonModule} from "@angular/common";
-import {AccordionComponent} from "./accordion/accordion/accordion.component";
-import {CalendarComponent} from "./calendar/calendar.component";
+import { NgModule } from "@angular/core";
+import { ButtonComponent } from "./button/button/button.component";
+import { CommonModule } from "@angular/common";
+import { AccordionComponent } from "./accordion/accordion/accordion.component";
+import { CalendarComponent } from "./calendar/calendar.component";
+import { CheckboxComponent } from "./checkbox/checkbox.component";
+
+
 
 @NgModule({
   declarations: [
+    CheckboxComponent,
     ButtonComponent,
     AccordionComponent,
-    CalendarComponent
+    CalendarComponent,
   ],
   exports: [
     ButtonComponent,
+    CheckboxComponent,
     AccordionComponent,
     CalendarComponent
   ],

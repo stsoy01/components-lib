@@ -22,6 +22,6 @@ export class AccordionComponent {
   public isOpened: number | undefined;
 
   public openDescription(index: number): void {
-    this.isOpened = index ?? undefined
+    this.isOpened = index;
   }
 }
