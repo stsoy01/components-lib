@@ -4,8 +4,9 @@ import { CommonModule } from "@angular/common";
 import { AccordionComponent } from "./accordion/accordion/accordion.component";
 import { CalendarComponent } from "./calendar/calendar.component";
 import { CheckboxComponent } from "./checkbox/checkbox.component";
-import { ElasticContainerComponent } from "./elastic-container/elastic-container.component";
+import { DialogComponent } from "./dialog/dialog.component";
 import { OverviewCompomponent } from "./overview/overview.component";
+import { ElasticContainerComponent } from "./elastic-container/elastic-container.component";
 
 
 
@@ -13,6 +14,7 @@ import { OverviewCompomponent } from "./overview/overview.component";
   declarations: [
     OverviewCompomponent,
     ElasticContainerComponent,
+    DialogComponent,
     CheckboxComponent,
     ButtonComponent,
     AccordionComponent,
@@ -21,6 +23,7 @@ import { OverviewCompomponent } from "./overview/overview.component";
   exports: [
     OverviewCompomponent,
     ElasticContainerComponent,
+    DialogComponent,
     ButtonComponent,
     CheckboxComponent,
     AccordionComponent,

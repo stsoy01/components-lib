@@ -13,8 +13,11 @@ type SwitcCases = string;
 
 export class SidebarComponent {
 
-  public section: SwitcCases = 'container';
-  public eCData = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis ipsum in elit mattis consectetur. Maecenas venenatis ligula libero, lobortis rhoncus eros aliquam a. Vivamus blandit scelerisque urna, eu euismod ipsum ultricies non. Aenean fringilla tincidunt luctus. Phasellus eleifend a enim vel aliquet. Donec accumsan orci ac nunc suscipit posuere in a turpis. Fusce hendrerit in lectus eu egestas. Donec nisl ipsum, faucibus sit amet elit eu, vehicula hendrerit purus. Duis tempus pulvinar pharetra. In volutpat, odio dictum ornare iaculis, arcu turpis blandit quam, sit amet malesuada nisl enim nec tortor. In eleifend arcu diam, ut dignissim risus elementum nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque pellentesque elit ac feugiat posuere. Aliquam diam ante, condimentum eget nisi nec, suscipit efficitur velit. Cras sed dolor eu tortor dapibus condimentum.'
+  public eCData = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ';
+
+  public section: SwitcCases = 'dialog';
+
+  public selectedDate!: any;
 
   public content: AccordionData[] = [
     {
@@ -48,7 +51,6 @@ export class SidebarComponent {
   }
 
   public selectSection(section: string): void {
-    console.log(section)
     this.section = section;
   }
 
@@ -57,7 +59,7 @@ export class SidebarComponent {
   }
 
   public selectDay(day: any): void {
-    console.log(new Date(day).toLocaleDateString())
+    this.selectedDate = new Date(day).toLocaleDateString()
   }
 
   public isHired(data: any): void {
