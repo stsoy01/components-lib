@@ -1,0 +1,14 @@
+<div class="overview">
+  <div class="overview__header">
+    <div class="overview__header__link">
+      <button (click)="switchSection('1')" class="overview__header__link--switch">{{'Preview'}}</button>
+      <button (click)="switchSection('2')" class="overview__header__link--switch">{{'TypeScript'}}</button>
+      <button (click)="switchSection('3')" class="overview__header__link--switch">{{'HTML'}}</button>
+    </div>
+    <div></div>
+  </div>
+  <hr style="background-color: #ededed; height: 1px; border: none">
+  <div class="overview__bodyContent" [ngSwitch]="section">
+    <ng-content *ngSwitchCase="'1'"></ng-content>
+  </div>
+</div>

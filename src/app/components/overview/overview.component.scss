@@ -1,0 +1,29 @@
+.overview {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0.125rem 0.1875rem #0000001a;
+  border: 1px solid #ededed;
+
+  &__header {
+    padding: 12px 0.875rem 12px 2rem;
+
+    &__link {
+
+      &--switch {
+        margin-right: 20px;
+        background: none;
+        border: none;
+      }
+
+      &--switch:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__bodyContent {
+    padding: 12px 0.875rem 12px 2rem;
+    min-height: 200px;
+    height: fit-content;
+  }
+}

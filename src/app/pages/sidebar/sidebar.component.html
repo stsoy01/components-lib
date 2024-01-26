@@ -9,7 +9,7 @@
       <li (click)="selectSection('accordion')" class="tsSidebar_leftbox-item">Accordion</li>
       <li (click)="selectSection('calendar')" class="tsSidebar_leftbox-item">Calendar</li>
       <li (click)="selectSection('checkbox')" class="tsSidebar_leftbox-item">Checkbox</li>
-
+      <li (click)="selectSection('container')" class="tsSidebar_leftbox-item">Elastic Container</li>
     </ul>
   </div>
   <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%">
@@ -43,6 +43,12 @@
     <div *ngSwitchCase="'checkbox'" class="tsSidebar_rightbox-section">
       <ts-checkbox [label]="'hired'" (onChecked)="isHired($event)"></ts-checkbox>
       <ts-checkbox [label]="'married'" [disabled]="true"></ts-checkbox>
+    </div>
+    <div *ngSwitchCase="'container'" class="tsSidebar_rightbox-section">
+
+      <ts-overview>
+        <ts-elastic-container [content]="eCData"></ts-elastic-container>
+      </ts-overview>
     </div>
   </div>
 

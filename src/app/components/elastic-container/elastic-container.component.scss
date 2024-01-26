@@ -1,0 +1,11 @@
+.container {
+  width: 256px;
+  margin-bottom: 20px;
+  font-size: 13px;
+
+  &__resizer {
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--primary_btn)
+  }
+}
