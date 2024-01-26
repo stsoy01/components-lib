@@ -4,17 +4,20 @@ import { CommonModule } from "@angular/common";
 import { AccordionComponent } from "./accordion/accordion/accordion.component";
 import { CalendarComponent } from "./calendar/calendar.component";
 import { CheckboxComponent } from "./checkbox/checkbox.component";
+import {DialogComponent} from "./dialog/dialog.component";
 
 
 
 @NgModule({
   declarations: [
+    DialogComponent,
     CheckboxComponent,
     ButtonComponent,
     AccordionComponent,
     CalendarComponent,
   ],
   exports: [
+    DialogComponent,
     ButtonComponent,
     CheckboxComponent,
     AccordionComponent,

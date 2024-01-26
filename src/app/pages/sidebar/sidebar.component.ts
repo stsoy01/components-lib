@@ -13,7 +13,9 @@ type SwitcCases = string;
 
 export class SidebarComponent {
 
-  public section: SwitcCases = 'checkbox';
+  public section: SwitcCases = 'dialog';
+
+  public selectedDate!: any;
 
   public content: AccordionData[] = [
     {
@@ -47,7 +49,6 @@ export class SidebarComponent {
   }
 
   public selectSection(section: string): void {
-    console.log(section)
     this.section = section;
   }
 
@@ -56,7 +57,7 @@ export class SidebarComponent {
   }
 
   public selectDay(day: any): void {
-    console.log(new Date(day).toLocaleDateString())
+    this.selectedDate = new Date(day).toLocaleDateString()
   }
 
   public isHired(data: any): void {

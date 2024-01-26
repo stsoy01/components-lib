@@ -9,6 +9,7 @@
       <li (click)="selectSection('accordion')" class="tsSidebar_leftbox-item">Accordion</li>
       <li (click)="selectSection('calendar')" class="tsSidebar_leftbox-item">Calendar</li>
       <li (click)="selectSection('checkbox')" class="tsSidebar_leftbox-item">Checkbox</li>
+      <li (click)="selectSection('dialog')" class="tsSidebar_leftbox-item">Dialog</li>
 
     </ul>
   </div>
@@ -17,13 +18,14 @@
     <div *ngSwitchCase="'button'" class="tsSidebar_rightbox-section">
       <div>
         <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
-          (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
+                   (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
         </ts-button>
         <ts-button appearance="primary" [size]="'m'" (click)="showMessage('Button with size `M`')"
-          [disabled]="false">It`s size 'M' without icon
+                   [disabled]="false">It`s size 'M' without icon
         </ts-button>
         <ts-button appearance="accent" icon="fa fa-address-book" [size]="'l'"
-          (click)="showMessage('Button with size `L`')" [disabled]="false">It`s 'L' size but width can be extended
+                   (click)="showMessage('Button with size `L`')" [disabled]="false">It`s 'L' size but width can be
+          extended
         </ts-button>
       </div>
     </div>
@@ -39,10 +41,16 @@
     </div>
     <div *ngSwitchCase="'calendar'" class="tsSidebar_rightbox-section">
       <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
+      <div>{{selectedDate}}</div>
     </div>
     <div *ngSwitchCase="'checkbox'" class="tsSidebar_rightbox-section">
       <ts-checkbox [label]="'hired'" (onChecked)="isHired($event)"></ts-checkbox>
       <ts-checkbox [label]="'married'" [disabled]="true"></ts-checkbox>
+    </div>
+    <div *ngSwitchCase="'dialog'" class="tsSidebar_rightbox-section">
+      <ts-dialog>
+        <p>{{'asdasd'}}</p>
+      </ts-dialog>
     </div>
   </div>
 
