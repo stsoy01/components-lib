@@ -1,6 +1,6 @@
-<div class="dialog">
+<div class="dialog" id="dialog">
   <div class="dialog__content">
-    <button>{{'s'}} </button>
+    <button (click)="closeDialog()">{{'s'}} </button>
     <ng-content></ng-content>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: 'ts-dialog',
@@ -7,4 +7,9 @@ import {Component} from "@angular/core";
 })
 
 export class DialogComponent {
+
+  public closeDialog(): void {
+    const dialogWindow = document.getElementById('dialog')
+    dialogWindow!.style.display = "none";
+  }
 }

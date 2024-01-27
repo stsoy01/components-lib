@@ -5,59 +5,41 @@
       <span style="display: inline-block">by <b>Sergey Tsoy</b></span>
     </div>
     <ul class="tsSidebar_leftbox-list">
-      <li (click)="selectSection('button')" class="tsSidebar_leftbox-item">Buttons</li>
-      <li (click)="selectSection('accordion')" class="tsSidebar_leftbox-item">Accordion</li>
-      <li (click)="selectSection('calendar')" class="tsSidebar_leftbox-item">Calendar</li>
-      <li (click)="selectSection('checkbox')" class="tsSidebar_leftbox-item">Checkbox</li>
-      <li (click)="selectSection('container')" class="tsSidebar_leftbox-item">Elastic Container</li>
-      <li (click)="selectSection('dialog')" class="tsSidebar_leftbox-item">Dialog</li>
-
+      <li class="tsSidebar_leftbox-item"><a routerLink="/buttons">{{'Buttons'}}</a></li>
+      <li class="tsSidebar_leftbox-item"><a routerLink="/accordion">{{'Accordion'}}</a></li>
+      <li class="tsSidebar_leftbox-item"><a routerLink="/calendar">{{'Calendar'}}</a></li>
+      <li class="tsSidebar_leftbox-item"><a routerLink="/checkbox">{{'Checkbox'}}</a></li>
+      <li class="tsSidebar_leftbox-item"><a routerLink="/elasticcontainer">{{'Elastic Container'}}</a></li>
+      <li class="tsSidebar_leftbox-item"><a routerLink="/dialog">{{'Dialog'}}</a></li>
     </ul>
   </div>
+
   <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%">
     <ts-header></ts-header>
-    <div *ngSwitchCase="'button'" class="tsSidebar_rightbox-section">
-      <div>
-        <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
-                   (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
-        </ts-button>
-        <ts-button appearance="primary" [size]="'m'" (click)="showMessage('Button with size `M`')"
-                   [disabled]="false">It`s size 'M' without icon
-        </ts-button>
-        <ts-button appearance="accent" icon="fa fa-address-book" [size]="'l'"
-          (click)="showMessage('Button with size `L`')" [disabled]="false">It`s 'L' size but width can be
-          extended
-        </ts-button>
-      </div>
-    </div>
-    <div *ngSwitchCase="'accordion'" class="tsSidebar_rightbox-section">
-      <div style="margin-bottom: 5px">
-        <ts-accordion [data]="content" [rounded]="true">
-        </ts-accordion>
-      </div>
-      <div>
-        <ts-accordion [data]="content2" [rounded]="false">
-        </ts-accordion>
-      </div>
-    </div>
-    <div *ngSwitchCase="'calendar'" class="tsSidebar_rightbox-section">
-      <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
 
+ 
+    <!-- <div *ngSwitchCase="'calendar'" class="tsSidebar_rightbox-section">
+      <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
     </div>
+
     <div *ngSwitchCase="'checkbox'" class="tsSidebar_rightbox-section">
       <ts-checkbox [label]="'hired'" (onChecked)="isHired($event)"></ts-checkbox>
       <ts-checkbox [label]="'married'" [disabled]="true"></ts-checkbox>
     </div>
-    <div *ngSwitchCase="'container'" class="tsSidebar_rightbox-section">
 
-      <ts-overview>
-        <ts-elastic-container [content]="eCData"></ts-elastic-container>
+    <div *ngSwitchCase="'container'" class="tsSidebar_rightbox-section">
+      <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" (selectedSection)="getSelectedSection($event)"
+        [ngSwitch]="switchSection">
+        <ts-elastic-container [content]="eCData" *ngSwitchCase="'Preview'"></ts-elastic-container>
+        <ts-checkbox *ngSwitchCase="'TypeScript'"></ts-checkbox>
+        <ts-calendar *ngSwitchCase="'HTML'"></ts-calendar>
       </ts-overview>
-      <div *ngSwitchCase="'dialog'" class="tsSidebar_rightbox-section">
-        <ts-dialog>
-          <p>{{'asdasd'}}</p>
-        </ts-dialog>
-      </div>
     </div>
 
+    <div *ngSwitchCase="'dialog'" class="tsSidebar_rightbox-section">
+      <ts-dialog>
+        <p>{{'asdasd'}}</p>
+      </ts-dialog>
+    </div> -->
+    <router-outlet></router-outlet>
   </div>

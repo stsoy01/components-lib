@@ -1,0 +1,12 @@
+<div class="buttonPage">
+  <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
+    (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
+  </ts-button>
+  <ts-button appearance="primary" [size]="'m'" (click)="showMessage('Button with size `M`')" [disabled]="false">It`s
+    size 'M' without icon
+  </ts-button>
+  <ts-button appearance="accent" icon="fa fa-address-book" [size]="'l'" (click)="showMessage('Button with size `L`')"
+    [disabled]="false">It`s 'L' size but width can be
+    extended
+  </ts-button>
+</div>

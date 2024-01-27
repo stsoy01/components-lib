@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: 'ts-overview',
@@ -8,11 +8,14 @@ import { Component } from "@angular/core";
 
 export class OverviewCompomponent {
 
+  @Input()
+  public linkList: string[] = [];
+  @Output()
+  public selectedSection: EventEmitter<number | string> = new EventEmitter<any>()
 
-  public section: string = '1'
 
-  public switchSection(section: string): void {
-    this.section = section;
+  public switchSection(section: number | string): void {
+    this.selectedSection.emit(section)
   }
 
 }
