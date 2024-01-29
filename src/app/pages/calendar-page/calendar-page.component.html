@@ -1,0 +1,10 @@
+<div class="tsPageContainer">
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
+    (selectedSection)="getSelecteSection($event)">
+
+    <div *ngSwitchCase="'Preview'">
+      <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
+    </div>
+
+  </ts-overview>
+</div>

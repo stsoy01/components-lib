@@ -8,8 +8,6 @@ import { OverviewCompomponent } from "./overview/overview.component";
 import { ElasticContainerComponent } from "./elastic-container/elastic-container.component";
 import { AccordionComponent } from "./accordion/accordion/accordion.component";
 
-
-
 @NgModule({
   declarations: [
     OverviewCompomponent,

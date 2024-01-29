@@ -7,10 +7,13 @@ import { HeaderComponent } from "./header/header.component";
 import { AppRoutingModule } from "../app-routing.module";
 import { ButtonpageComponent } from "./button-page/button-page.component";
 import { AccordionpageComponent } from "./accordion-page/accordion-page.component";
+import { CalendarpageComponent } from "./calendar-page/calendar-page.component";
+import { OverviewCompomponent } from "../components/overview/overview.component";
 
 
 @NgModule({
   declarations: [
+    CalendarpageComponent,
     AccordionpageComponent,
     ButtonpageComponent,
     SidebarComponent,

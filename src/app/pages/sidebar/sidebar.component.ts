@@ -19,11 +19,6 @@ export class SidebarComponent {
 
   public switchSection: string | number = 'Preview';
 
-  public selectedDate!: any;
-
- 
-
-
  
   public switchDarkMode(): void {
     document.body.classList.toggle('dark-theme')
@@ -37,9 +32,7 @@ export class SidebarComponent {
     console.log(selectedValue)
   }
 
-  public selectDay(day: any): void {
-    this.selectedDate = new Date(day).toLocaleDateString()
-  }
+ 
 
   public isHired(data: any): void {
     console.log(data);
