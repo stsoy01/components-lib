@@ -8,11 +8,17 @@ import { AppRoutingModule } from "../app-routing.module";
 import { ButtonpageComponent } from "./button-page/button-page.component";
 import { AccordionpageComponent } from "./accordion-page/accordion-page.component";
 import { CalendarpageComponent } from "./calendar-page/calendar-page.component";
-import { OverviewCompomponent } from "../components/overview/overview.component";
+import { CheckboxpageComponent } from "./checkbox-page/checkbox-page.component";
+import { ElasticcontainerpageComponent } from "./elastic-container-page/elastic-container-page.component";
+import { DialogpageComponent } from "./dialog-page/dialog-page.component";
+
 
 
 @NgModule({
   declarations: [
+    DialogpageComponent,
+    ElasticcontainerpageComponent,
+    CheckboxpageComponent,
     CalendarpageComponent,
     AccordionpageComponent,
     ButtonpageComponent,

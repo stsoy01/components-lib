@@ -1,6 +1,24 @@
-<div style="margin-bottom: 5px" class="tsPageContainer">
-  <ts-accordion [data]="content" [rounded]="true">
-  </ts-accordion>
-  <!-- <ts-accordion [data]="content2" [rounded]="false">
-  </ts-accordion> -->
+<div class="tsPageContainer">
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
+    (selectedSection)="selectSection($event)">
+
+    <div *ngSwitchCase="'Preview'" style="margin-bottom: 40px;">
+      <ts-accordion [data]="content" [rounded]="true">
+      </ts-accordion>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      {{'TypeScript'}}
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      {{'HTML'}}
+    </div>
+
+    <div *ngSwitchCase="'Preview'">
+      <ts-accordion [data]="content2" [rounded]="false">
+      </ts-accordion>
+    </div>
+
+  </ts-overview>
 </div>

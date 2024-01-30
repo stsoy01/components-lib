@@ -1,12 +1,34 @@
 <div class="tsPageContainer">
-  <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
-    (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
-  </ts-button>
-  <ts-button appearance="primary" [size]="'m'" (click)="showMessage('Button with size `M`')" [disabled]="false">It`s
-    size 'M' without icon
-  </ts-button>
-  <ts-button appearance="accent" icon="fa fa-address-book" [size]="'l'" (click)="showMessage('Button with size `L`')"
-    [disabled]="false">It`s 'L' size but width can be
-    extended
-  </ts-button>
+  <ts-overview [linkList]="['Preview','TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
+    (selectedSection)="switchSection($event)">
+
+    <div *ngSwitchCase="'Preview'">
+      <div>
+        <ts-button appearance="outline" icon="fa fa-battery-quarter" [size]="'m'"
+          (click)="showMessage('Button with size `S`')" [disabled]="false">It`s size 'S'
+        </ts-button>
+      </div>
+      <div>
+        <ts-button appearance="primary" [size]="'m'" (click)="showMessage('Button with size `M`')"
+          [disabled]="false">It`s
+          size 'M' without icon
+        </ts-button>
+      </div>
+      <div>
+        <ts-button appearance="accent" icon="fa fa-address-book" [size]="'l'"
+          (click)="showMessage('Button with size `L`')" [disabled]="false">It`s 'L' size but width can be
+          extended
+        </ts-button>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      {{'TypeScript'}}
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      {{'HTML'}}
+    </div>
+
+  </ts-overview>
 </div>

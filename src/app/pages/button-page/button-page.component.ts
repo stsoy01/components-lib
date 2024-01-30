@@ -7,6 +7,13 @@ import { Component } from "@angular/core";
 })
 
 export class ButtonpageComponent {
+
+  public selectedSwitchSection: number | string = 'Preview';
+
+  public switchSection(section: string | number): void {
+    this.selectedSwitchSection = section;
+  }
+
   public showMessage(message: string): void {
     alert(message)
   }

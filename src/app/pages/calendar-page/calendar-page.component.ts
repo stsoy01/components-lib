@@ -16,9 +16,6 @@ export class CalendarpageComponent {
 
   public getSelecteSection(section: number | string): void {
     this.selectedSwitchSection = section;
-    console.log(this.selectedSwitchSection);
-
-
   }
 
   public selectDay(day: any): void {

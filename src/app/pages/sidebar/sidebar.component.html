@@ -14,27 +14,7 @@
     </ul>
   </div>
 
-  <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%">
+  <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%; max-height: 100vh; overflow: scroll;">
     <ts-header></ts-header>
-
-    <!--<div *ngSwitchCase="'checkbox'" class="tsSidebar_rightbox-section">
-      <ts-checkbox [label]="'hired'" (onChecked)="isHired($event)"></ts-checkbox>
-      <ts-checkbox [label]="'married'" [disabled]="true"></ts-checkbox>
-    </div>
-
-    <div *ngSwitchCase="'container'" class="tsSidebar_rightbox-section">
-      <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" (selectedSection)="getSelectedSection($event)"
-        [ngSwitch]="switchSection">
-        <ts-elastic-container [content]="eCData" *ngSwitchCase="'Preview'"></ts-elastic-container>
-        <ts-checkbox *ngSwitchCase="'TypeScript'"></ts-checkbox>
-        <ts-calendar *ngSwitchCase="'HTML'"></ts-calendar>
-      </ts-overview>
-    </div>
-
-    <div *ngSwitchCase="'dialog'" class="tsSidebar_rightbox-section">
-      <ts-dialog>
-        <p>{{'asdasd'}}</p>
-      </ts-dialog>
-    </div> -->
     <router-outlet></router-outlet>
   </div>

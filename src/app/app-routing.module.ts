@@ -4,15 +4,18 @@ import { ButtonpageComponent } from './pages/button-page/button-page.component';
 import { AccordionComponent } from './components/accordion/accordion/accordion.component';
 import { AccordionpageComponent } from './pages/accordion-page/accordion-page.component';
 import { CalendarpageComponent } from './pages/calendar-page/calendar-page.component';
+import { CheckboxpageComponent } from './pages/checkbox-page/checkbox-page.component';
+import { ElasticcontainerpageComponent } from './pages/elastic-container-page/elastic-container-page.component';
+import { DialogpageComponent } from './pages/dialog-page/dialog-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/buttons', pathMatch: 'full' },
   { path: 'buttons', component: ButtonpageComponent },
   { path: 'accordion', component: AccordionpageComponent },
   { path: 'calendar', component: CalendarpageComponent },
-  { path: 'checkbox', component: AccordionComponent },
-  { path: 'elasticcontainer', component: AccordionComponent },
-  { path: 'dialog', component: AccordionComponent },
+  { path: 'checkbox', component: CheckboxpageComponent },
+  { path: 'elasticcontainer', component: ElasticcontainerpageComponent },
+  { path: 'dialog', component: DialogpageComponent },
 ];
 
 @NgModule({

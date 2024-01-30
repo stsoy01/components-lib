@@ -3,7 +3,7 @@
     (selectedSection)="getSelecteSection($event)">
 
     <div *ngSwitchCase="'Preview'">
-      <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
+      <ts-elastic-container [content]="content"></ts-elastic-container>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
