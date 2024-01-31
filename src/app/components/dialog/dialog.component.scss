@@ -15,10 +15,46 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 400px;
-    height: 200px;
-    padding: 10px 15px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 15px;
     border-radius: 12px;
     background-color: #fff;
+
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: -36px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      background-color: #0000002b;
+    }
+
+    &__btn::before,
+    &__btn::after {
+      content: " ";
+      position: absolute;
+      top: 7px;
+      left: 14px;
+      height: 17px;
+      width: 2px;
+      background-color: white;
+    }
+
+    &__btn::after {
+      transform: rotate(45deg);
+    }
+
+    &__btn::before {
+      transform: rotate(-45deg);
+    }
+
+    &__btn:hover {
+      cursor: pointer;
+      background-color: #00000059;
+    }
   }
 }

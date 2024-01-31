@@ -7,6 +7,8 @@ import { CalendarpageComponent } from './pages/calendar-page/calendar-page.compo
 import { CheckboxpageComponent } from './pages/checkbox-page/checkbox-page.component';
 import { ElasticcontainerpageComponent } from './pages/elastic-container-page/elastic-container-page.component';
 import { DialogpageComponent } from './pages/dialog-page/dialog-page.component';
+import { DropdownpageComponent } from './pages/dropdown-page/dropdown-page.component';
+import { SelectpageComponent } from './pages/select-page/select-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/buttons', pathMatch: 'full' },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'checkbox', component: CheckboxpageComponent },
   { path: 'elasticcontainer', component: ElasticcontainerpageComponent },
   { path: 'dialog', component: DialogpageComponent },
+  { path: 'dropdown', component: DropdownpageComponent },
+  { path: 'select', component: SelectpageComponent },
 ];
 
 @NgModule({

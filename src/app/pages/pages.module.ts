@@ -11,11 +11,15 @@ import { CalendarpageComponent } from "./calendar-page/calendar-page.component";
 import { CheckboxpageComponent } from "./checkbox-page/checkbox-page.component";
 import { ElasticcontainerpageComponent } from "./elastic-container-page/elastic-container-page.component";
 import { DialogpageComponent } from "./dialog-page/dialog-page.component";
+import { DropdownpageComponent } from "./dropdown-page/dropdown-page.component";
+import { SelectpageComponent } from "./select-page/select-page.component";
 
 
 
 @NgModule({
   declarations: [
+    SelectpageComponent,
+    DropdownpageComponent,
     DialogpageComponent,
     ElasticcontainerpageComponent,
     CheckboxpageComponent,

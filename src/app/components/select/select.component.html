@@ -1,0 +1,12 @@
+<div class="tsSelect">
+  <div class="tsSelect__select" (click)="showDropdownList()">
+    <div>
+      <div *ngIf="title" style="font-size: 11px; color: var(--light-grey); user-select: none;">{{title}}</div>
+      <span style="user-select: none;">{{selectedValue}}</span>
+    </div>
+    <span></span>
+  </div>
+  <div *ngIf="isDropdownShowed">
+    <div>{{'isDropdownShowed'}}</div>
+  </div>
+</div>

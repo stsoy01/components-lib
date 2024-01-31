@@ -1,6 +1,6 @@
-<div class="dialog" id="dialog">
+<div class="dialog" id={{dialogService.id}} *ngIf="dialogService.id === this.id">
   <div class="dialog__content">
-    <button (click)="closeDialog()">{{'s'}} </button>
+    <button (click)="closeDialog()" class="dialog__content__btn"></button>
     <ng-content></ng-content>
   </div>
 </div>

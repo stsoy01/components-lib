@@ -1,13 +1,12 @@
 <div class="tsPageContainer">
-  <h2 style="margin-bottom: 5px;">{{'Checkbox'}}</h2>
+  <h2 style="margin-bottom: 5px;">{{'Dropdown'}}</h2>
   <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for selecting predefined values ​​and working with them'}}</p>
   <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
-  
-  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
-    (selectedSection)="getSelecteSection($event)">
 
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSection" (selectedSection)="selectedSwitchSection($event)">
+  
     <div *ngSwitchCase="'Preview'">
-      <ts-checkbox></ts-checkbox>
+      {{'Preview'}}
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
@@ -19,4 +18,5 @@
     </div>
 
   </ts-overview>
+
 </div>

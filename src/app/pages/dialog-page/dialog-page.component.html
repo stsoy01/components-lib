@@ -1,4 +1,42 @@
 <div class="tsPageContainer">
-  <!-- <ts-overview></ts-overview> -->
-  <ts-dialog></ts-dialog>
+  <h2 style="margin-bottom: 5px;">{{'Dialog (Modal window)'}}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component Component for displaying transmitted content in a separate window'}}</p>
+  <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
+
+
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSection"
+    (selectedSection)="selectedSwitchSection($event)">
+
+    <div *ngSwitchCase="'Preview'">
+      <ts-button [size]="'m'" appearance="accent" (click)="dialogService.open('dialog_1')" style="display: block;">{{'Open dialog #1'}}</ts-button>
+      <ts-button [size]="'m'" appearance="primary" (click)="dialogService.open('dialog_2')">{{'Open dialog #2'}}</ts-button>
+
+      <ts-dialog [id]="'dialog_1'">
+        <div style="width: 400px;">
+          <h2 style="margin-bottom: 10px;">{{'Description'}}</h2>
+          <p style="font-size: 14px; margin-bottom: 5px">
+            {{'You see this error when you try to inject a service but have not declared a corresponding provider. A provider is a mapping that supplies a value that you can inject into the constructor of a class in your application.'}}
+          </p>
+          <p style="font-size: 14px;">{{' Read more on providers in our Dependency Injection guide.'}}</p>
+        </div>
+
+      </ts-dialog>
+
+      <ts-dialog [id]="'dialog_2'">
+        <ts-button [size]="'m'" appearance="accent">{{'Button in dialog'}}</ts-button>
+      </ts-dialog>
+
+
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      TypeScript
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      {{'HTML'}}
+    </div>
+
+  </ts-overview>
+
 </div>

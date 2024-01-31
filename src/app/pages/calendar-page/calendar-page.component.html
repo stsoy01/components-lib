@@ -1,4 +1,8 @@
 <div class="tsPageContainer">
+  <h2 style="margin-bottom: 5px;">{{'Calendar'}}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for working with dates. You can select either one day or a range of days'}}</p>
+  <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
+
   <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
     (selectedSection)="getSelecteSection($event)">
 

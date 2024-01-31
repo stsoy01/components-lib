@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { DialogService } from "./dialog.service";
 
 @Component({
   selector: 'ts-dialog',
@@ -8,8 +9,16 @@ import { Component } from "@angular/core";
 
 export class DialogComponent {
 
+  @Input()
+  public id!: string;
+
+
+  constructor(public dialogService: DialogService) {
+  }
+
   public closeDialog(): void {
-    const dialogWindow = document.getElementById('dialog')
+    const dialogWindow = document.getElementById(`${this.dialogService.id}`)
     dialogWindow!.style.display = "none";
+    this.dialogService.id = ''
   }
 }

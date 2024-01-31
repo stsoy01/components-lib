@@ -7,9 +7,11 @@ import { DialogComponent } from "./dialog/dialog.component";
 import { OverviewCompomponent } from "./overview/overview.component";
 import { ElasticContainerComponent } from "./elastic-container/elastic-container.component";
 import { AccordionComponent } from "./accordion/accordion/accordion.component";
+import { SelectComponent } from "./select/select.component";
 
 @NgModule({
   declarations: [
+    SelectComponent,
     OverviewCompomponent,
     ElasticContainerComponent,
     DialogComponent,
@@ -19,6 +21,7 @@ import { AccordionComponent } from "./accordion/accordion/accordion.component";
     CalendarComponent,
   ],
   exports: [
+    SelectComponent,
     AccordionComponent,
     OverviewCompomponent,
     ElasticContainerComponent,
