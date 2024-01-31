@@ -1,9 +1,12 @@
-<div class="tsPageContainer">
+<div class="tsPageContainer" style="align-items: center">
   <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
                (selectedSection)="getSelecteSection($event)">
 
     <div *ngSwitchCase="'Preview'">
-      <ts-block-status></ts-block-status>
+      <div style="display: flex; justify-content: center">
+        <ts-block-status [status]="'404'"></ts-block-status>
+        <ts-block-status [status]="'error'"></ts-block-status>
+      </div>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
@@ -16,3 +19,4 @@
 
   </ts-overview>
 </div>
+<!--<ts-block-status [status]="'404'"></ts-block-status>-->

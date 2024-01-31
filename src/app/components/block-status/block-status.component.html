@@ -2,10 +2,16 @@
 
 
 <div class="tsBlockStatus">
-  @If (true) {
-
+  @if (status === '404') {
+    <div src="./20602784_6339696.svg" class="tsBlockStatus__img notfound"></div>
+    <h3 class="tsBlockStatus__title" class="tsBlockStatus__title">{{'Not found'}}</h3>
+    <div class="tsBlockStatus__desc" class="tsBlockStatus__desc">{{'Current URL is not valid'}}</div>
   }
-  <div src="./20602784_6339696.svg" class="tsBlockStatus__img"></div>
-  <h3 class="tsBlockStatus__title">{{'Not found'}}</h3>
-  <div class="tsBlockStatus__desc">{{'All tags were removed'}}</div>
+  @else if(status === 'error') {
+    <div src="./20602784_6339696.svg" class="tsBlockStatus__img error"></div>
+    <h3 class="tsBlockStatus__title" class="tsBlockStatus__title">{{'Error'}}</h3>
+    <div class="tsBlockStatus__desc" class="tsBlockStatus__desc">{{'Something gone wrong. Please refresh your page'}}</div>
+  }
+
+
 </div>

@@ -2,10 +2,30 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  min-width: 500px;
 
   &__img {
     width: 9rem;
     height: 9rem;
-    background-image: url('./notfound.svg');
+    background-repeat: no-repeat;
   }
+
+  &__title {
+    margin: 5px 0 15px 0;
+    font-size: 25px;
+    user-select: none;
+  }
+
+  &__desc {
+    user-select: none;
+    color: var(--light-grey);
+  }
+}
+
+.notfound {
+  background-image: url('./notfound.svg');
+}
+
+.error {
+  background-image: url('./error.svg');
 }
