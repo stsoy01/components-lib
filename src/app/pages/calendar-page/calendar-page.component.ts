@@ -10,7 +10,7 @@ type SectionTypes = 'Preview' | 'TypeSctript' | 'HTML' | string
 })
 
 export class CalendarpageComponent {
-  public selectedDate: any = '';
+  public selectedDate!: any;
 
   public selectedSwitchSection: number | string = 'Preview'
 
