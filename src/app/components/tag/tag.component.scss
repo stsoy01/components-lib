@@ -42,6 +42,12 @@
     &-close:hover {
       cursor: pointer;
     }
-
   }
+}
+
+.warning {
+  width: fit-content;
+  padding: 0.5em;
+  background: cadetblue;
+  border-radius: 8px;
 }

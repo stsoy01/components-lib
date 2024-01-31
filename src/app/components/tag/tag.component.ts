@@ -13,9 +13,6 @@ export class TagComponent {
 
   @Input()
   public closeBtn: boolean = false;
-
-  @Input()
-  public singleTag: boolean = true;
   @Input()
   public tagList: string[] = []
 

@@ -1,0 +1,11 @@
+.tsBlockStatus {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__img {
+    width: 9rem;
+    height: 9rem;
+    background-image: url('./notfound.svg');
+  }
+}

@@ -12,9 +12,11 @@ import { CheckboxpageComponent } from "./checkbox-page/checkbox-page.component";
 import { ElasticcontainerpageComponent } from "./elastic-container-page/elastic-container-page.component";
 import { DialogpageComponent } from "./dialog-page/dialog-page.component";
 import {TagpageComponent} from "./tag-page/tag-page.component";
+import {BlockstatuspageComponent} from "./block-status-page/block-status-page.component";
 
 @NgModule({
   declarations: [
+    BlockstatuspageComponent,
     TagpageComponent,
     DialogpageComponent,
     ElasticcontainerpageComponent,

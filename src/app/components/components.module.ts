@@ -1,16 +1,18 @@
-import { NgModule } from "@angular/core";
-import { ButtonComponent } from "./button/button/button.component";
-import { CommonModule } from "@angular/common";
-import { CalendarComponent } from "./calendar/calendar.component";
-import { CheckboxComponent } from "./checkbox/checkbox.component";
-import { DialogComponent } from "./dialog/dialog.component";
-import { OverviewCompomponent } from "./overview/overview.component";
-import { ElasticContainerComponent } from "./elastic-container/elastic-container.component";
-import { AccordionComponent } from "./accordion/accordion/accordion.component";
+import {NgModule} from "@angular/core";
+import {ButtonComponent} from "./button/button/button.component";
+import {CommonModule} from "@angular/common";
+import {CalendarComponent} from "./calendar/calendar.component";
+import {CheckboxComponent} from "./checkbox/checkbox.component";
+import {DialogComponent} from "./dialog/dialog.component";
+import {OverviewCompomponent} from "./overview/overview.component";
+import {ElasticContainerComponent} from "./elastic-container/elastic-container.component";
+import {AccordionComponent} from "./accordion/accordion/accordion.component";
 import {TagComponent} from "./tag/tag.component";
+import {BlockStatusComponent} from "./block-status/block-status.component";
 
 @NgModule({
   declarations: [
+    BlockStatusComponent,
     TagComponent,
     OverviewCompomponent,
     ElasticContainerComponent,
@@ -21,6 +23,7 @@ import {TagComponent} from "./tag/tag.component";
     CalendarComponent,
   ],
   exports: [
+    BlockStatusComponent,
     TagComponent,
     AccordionComponent,
     OverviewCompomponent,

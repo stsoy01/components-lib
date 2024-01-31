@@ -1,5 +1,5 @@
-<div *ngIf="tagList.length">
-  <span *ngFor="let tag of tagList; else noData; let i = index"
+<div *ngIf="tagList.length; else noData;">
+  <span *ngFor="let tag of tagList; let i = index"
         [ngStyle]="{'border-radius': rounded ? '8px' : '0px'}"
         class="tsTag">
       {{tag}}
@@ -10,11 +10,13 @@
   </span>
 </div>
 
-<ng-template #noData></ng-template>
+<ng-template #noData>
+  <div class="warning">
+    <h4>{{'Attention'}}</h4>
+    <span [ngStyle]="{'font-size': '13px'}">
+      {{'All tags were removed. But TS UI is still an awesome UI-kit library'}}
+    </span>
+  </div>
+</ng-template>
 
-<div *ngIf="singleTag">
-  <span [ngStyle]="{'border-radius': rounded ? '8px' : '0px'}" class="tsTag">
-    <ng-content></ng-content>
-    <button *ngIf="closeBtn" class="tsTag__flexbox-close"></button>
-  </span>
-</div>
+

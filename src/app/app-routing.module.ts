@@ -7,6 +7,7 @@ import {CheckboxpageComponent} from './pages/checkbox-page/checkbox-page.compone
 import {ElasticcontainerpageComponent} from './pages/elastic-container-page/elastic-container-page.component';
 import {DialogpageComponent} from './pages/dialog-page/dialog-page.component';
 import {TagpageComponent} from "./pages/tag-page/tag-page.component";
+import {BlockstatuspageComponent} from "./pages/block-status-page/block-status-page.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/buttons', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'elasticcontainer', component: ElasticcontainerpageComponent},
   {path: 'dialog', component: DialogpageComponent},
   {path: 'tag', component: TagpageComponent},
+  {path: 'blockstatus', component: BlockstatuspageComponent},
 ];
 
 @NgModule({

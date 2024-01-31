@@ -7,21 +7,21 @@
       <div style="margin-bottom: 10px">
         <ts-tag [rounded]="true"
                 [closeBtn]="true"
-                [singleTag]="false"
                 [tagList]="['Tag #1', 'Tag #3', 'Tag #2', 'Recommendation', 'Weather']">
         </ts-tag>
       </div>
 
       <div style="margin-bottom: 10px">
         <ts-tag [rounded]="true"
-                [singleTag]="true">{{'MasterCard'}}
+                [closeBtn]="true"
+                [tagList]="['MasterCard']">
         </ts-tag>
       </div>
 
       <div style="margin-bottom: 10px">
         <ts-tag [rounded]="false"
-                [singleTag]="true"
-                [closeBtn]="false">{{'Visa'}}
+                [tagList]="['Visa']"
+                [closeBtn]="false">
         </ts-tag>
       </div>
     </div>

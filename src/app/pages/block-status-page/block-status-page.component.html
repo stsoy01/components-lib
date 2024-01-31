@@ -1,0 +1,18 @@
+<div class="tsPageContainer">
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
+               (selectedSection)="getSelecteSection($event)">
+
+    <div *ngSwitchCase="'Preview'">
+      <ts-block-status></ts-block-status>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      <div>{{'TypeScript'}}</div>
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      <div>{{'HTML'}}</div>
+    </div>
+
+  </ts-overview>
+</div>
