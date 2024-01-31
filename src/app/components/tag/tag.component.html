@@ -1,0 +1,20 @@
+<div *ngIf="tagList.length">
+  <span *ngFor="let tag of tagList; else noData; let i = index"
+        [ngStyle]="{'border-radius': rounded ? '8px' : '0px'}"
+        class="tsTag">
+      {{tag}}
+    <button *ngIf="closeBtn"
+            class="tsTag__flexbox-close"
+            (click)="deleteTag(tag,i)">
+    </button>
+  </span>
+</div>
+
+<ng-template #noData></ng-template>
+
+<div *ngIf="singleTag">
+  <span [ngStyle]="{'border-radius': rounded ? '8px' : '0px'}" class="tsTag">
+    <ng-content></ng-content>
+    <button *ngIf="closeBtn" class="tsTag__flexbox-close"></button>
+  </span>
+</div>
