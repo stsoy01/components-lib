@@ -1,0 +1,53 @@
+.tsTag {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: fit-content;
+  padding: 0.2rem 0.75rem;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  font-weight: 600;
+  color: var(--white_color);
+
+  &__flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-close {
+      width: 13px;
+      height: 13px;
+      margin-left: 20px !important;
+      background-color: inherit;
+      border: none;
+    }
+
+    &-close::after, &-close::before {
+      content: " ";
+      position: absolute;
+      top: 6px;
+      height: 12px;
+      width: 0;
+      border: 1px solid var(--white_color);
+    }
+
+    &-close::after {
+      transform: rotate(45deg);
+    }
+
+
+    &-close::before {
+      transform: rotate(-45deg);
+    }
+
+    &-close:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.warning {
+  width: fit-content;
+  padding: 0.5em;
+  background: cadetblue;
+  border-radius: 8px;
+}

@@ -6,7 +6,13 @@
     </div>
     <span></span>
   </div>
-  <div *ngIf="isDropdownShowed">
-    <div>{{'isDropdownShowed'}}</div>
+  <div class="tsSelect__dropdown"
+    [ngClass]="!isDropdownShowed ? 'tsSelect__dropdown--hidden' : 'tsSelect__dropdown--showed'">
+    <ul *ngIf="dropdownList.length; else noDropdownData" style="padding: 4px 6px">
+      <li *ngFor="let item of dropdownList; let i = index" class="tsSelect__dropdown--item" (click)="showDropdownList(item)">
+        <h5>{{item.label}}</h5>
+      </li>
+    </ul>
+    <ng-template #noDropdownData>{{'no data'}}</ng-template>
   </div>
 </div>

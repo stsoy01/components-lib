@@ -1,0 +1,42 @@
+<div class="tsPageContainer">
+  <h2 style="margin-bottom: 5px;">{{'Tags'}}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component with short information^ which can be deleted, updated'}}</p>
+  <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
+
+  <ts-overview [linkList]="['Preview','TypeScript', 'HTML']"
+               [ngSwitch]="selectedSwitchSection"
+               (selectedSection)="switchSection($event)">
+
+    <div *ngSwitchCase="'Preview'">
+      <div style="margin-bottom: 10px">
+        <ts-tag [rounded]="true"
+                [closeBtn]="true"
+                [tagList]="['Tag #1', 'Tag #3', 'Tag #2', 'Recommendation', 'Weather']">
+        </ts-tag>
+      </div>
+
+      <div style="margin-bottom: 10px">
+        <ts-tag [rounded]="true"
+                [closeBtn]="true"
+                [tagList]="['MasterCard']">
+        </ts-tag>
+      </div>
+
+      <div style="margin-bottom: 10px">
+        <ts-tag [rounded]="false"
+                [tagList]="['Visa']"
+                [closeBtn]="false">
+        </ts-tag>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      {{'TypeScript'}}
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      {{'HTML'}}
+    </div>
+
+  </ts-overview>
+</div>

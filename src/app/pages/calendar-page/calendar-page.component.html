@@ -4,10 +4,12 @@
   <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
 
   <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
-    (selectedSection)="getSelecteSection($event)">
+               (selectedSection)="getSelecteSection($event)">
 
     <div *ngSwitchCase="'Preview'">
       <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
+      <span *ngIf="selectedDate" style="margin-top: 20px; display: inline-block">{{'Дата важного события: '}}<span
+        style="font-weight: bold">{{selectedDate}}</span></span>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">

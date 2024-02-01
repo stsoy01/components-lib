@@ -8,10 +8,15 @@ import { OverviewCompomponent } from "./overview/overview.component";
 import { ElasticContainerComponent } from "./elastic-container/elastic-container.component";
 import { AccordionComponent } from "./accordion/accordion/accordion.component";
 import { SelectComponent } from "./select/select.component";
+import { TagComponent } from "./tag/tag.component";
+import { BlockStatusComponent } from "./block-status/block-status.component";
+
+
 
 @NgModule({
   declarations: [
-    SelectComponent,
+    BlockStatusComponent,
+    TagComponent,
     OverviewCompomponent,
     ElasticContainerComponent,
     DialogComponent,
@@ -19,9 +24,12 @@ import { SelectComponent } from "./select/select.component";
     ButtonComponent,
     AccordionComponent,
     CalendarComponent,
+    SelectComponent
   ],
   exports: [
     SelectComponent,
+    BlockStatusComponent,
+    TagComponent,
     AccordionComponent,
     OverviewCompomponent,
     ElasticContainerComponent,
