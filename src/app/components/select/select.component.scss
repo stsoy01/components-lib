@@ -3,11 +3,29 @@
 
   &__select {
     display: flex;
+    justify-content: space-between;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0.125rem 0.1875rem #0000001a;
     border: 1px solid #ededed;
     transition: .2s;
+
+    &--btn::before,
+    &--btn::after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      // width: 2px;
+      border: 1px solid black
+    }
+
+    &--btn::after {
+      transform: rotate(45deg);
+    }
+
+    &--btn::before {
+      transform: rotate(-45deg);
+    }
   }
 
   &__select:hover {
@@ -37,6 +55,7 @@
     &--showed {
       position: absolute;
       top: 60px;
+      z-index: 1000;
       transition: .3s;
     }
 

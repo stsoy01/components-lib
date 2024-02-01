@@ -1,18 +1,21 @@
-<div class="tsSelect">
+<span class="tsSelect">
   <div class="tsSelect__select" (click)="showDropdownList()">
     <div>
       <div *ngIf="title" style="font-size: 11px; color: var(--light-grey); user-select: none;">{{title}}</div>
       <span style="user-select: none;">{{selectedValue}}</span>
     </div>
-    <span></span>
+    <div class="tsSelect__select--btn"></div>
   </div>
-  <div class="tsSelect__dropdown"
+  <div class="tsSelect__dropdown" #itemList
     [ngClass]="!isDropdownShowed ? 'tsSelect__dropdown--hidden' : 'tsSelect__dropdown--showed'">
     <ul *ngIf="dropdownList.length; else noDropdownData" style="padding: 4px 6px">
-      <li *ngFor="let item of dropdownList; let i = index" class="tsSelect__dropdown--item" (click)="showDropdownList(item)">
+      <li *ngFor="let item of dropdownList; let i = index" class="tsSelect__dropdown--item"
+        (click)="showDropdownList(item)">
         <h5>{{item.label}}</h5>
       </li>
     </ul>
-    <ng-template #noDropdownData>{{'no data'}}</ng-template>
+    <ng-template #noDropdownData>
+      <div class="tsSelect__dropdown--item">{{'no data'}}</div>
+    </ng-template>
   </div>
-</div>
+</span>
