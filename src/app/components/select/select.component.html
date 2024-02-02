@@ -4,14 +4,17 @@
       <div *ngIf="title" style="font-size: 11px; color: var(--light-grey); user-select: none;">{{title}}</div>
       <span style="user-select: none;">{{selectedValue}}</span>
     </div>
-    <div class="tsSelect__select--btn"></div>
+    <div class="tsSelect__select--btn" [ngStyle]="{'transform': isDropdownShowed ? 'rotate(45deg)' : ''}"></div>
   </div>
   <div class="tsSelect__dropdown" #itemList
-    [ngClass]="!isDropdownShowed ? 'tsSelect__dropdown--hidden' : 'tsSelect__dropdown--showed'">
+       [ngClass]="!isDropdownShowed ? 'tsSelect__dropdown--hidden' : 'tsSelect__dropdown--showed'">
     <ul *ngIf="dropdownList.length; else noDropdownData" style="padding: 4px 6px">
       <li *ngFor="let item of dropdownList; let i = index" class="tsSelect__dropdown--item"
-        (click)="showDropdownList(item)">
-        <h5>{{item.label}}</h5>
+          (click)="showDropdownList(item)">
+       <div class="tsSelect__dropdown--item--flex">
+          <h5>{{item.label}}</h5>
+         <div *ngIf="i === number" class="tsSelect__dropdown--item--flex--checked"></div>
+       </div>
       </li>
     </ul>
     <ng-template #noDropdownData>

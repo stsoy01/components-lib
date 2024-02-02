@@ -1,20 +1,23 @@
 <div class="tsPageContainer">
   <h2 style="margin-bottom: 5px;">{{'Select'}}</h2>
-  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for selecting a value from a drop-down
-    list. The list is specified by the developer'}}</p>
+  <p
+    style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for selecting a value from a drop-down list. The list is specified by the developer'}}</p>
   <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
 
   <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSection"
-    (selectedSection)="selectedSwitchSection($event)">
+               (selectedSection)="selectedSwitchSection($event)">
 
     <div *ngSwitchCase="'Preview'">
 
-      <ts-select [title]="'Currency'" [dropdownList]="[
-        {label: '$ (dollar)', value: 1},
-        {label: '€ (euro)', value: 2},
-        {label: '₽ (ruble)', value: 3},
-      ]">
+      <ts-select [title]="'Currency'"
+                 (onSelect)="getSelectedValue($event)"
+                 [dropdownList]="[
+                      {label: '$ (dollar)', value: 1},
+                      {label: '€ (euro)', value: 2},
+                      {label: '₽ (ruble)', value: 3},
+                    ]">
       </ts-select>
+<!--      <h3 *ngIf="selectedValue">{{'You selected: ' + selectedValue ?? ''}}</h3>-->
     </div>
 
     <div *ngSwitchCase="'TypeScript'">

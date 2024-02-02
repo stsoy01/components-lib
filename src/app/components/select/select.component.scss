@@ -4,28 +4,22 @@
   &__select {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
     border-radius: 8px;
     box-shadow: 0 0.125rem 0.1875rem #0000001a;
     border: 1px solid #ededed;
     transition: .2s;
 
-    &--btn::before,
-    &--btn::after {
-      content: '';
-      position: absolute;
-      height: 20px;
-      // width: 2px;
-      border: 1px solid black
+    &--btn {
+      height: 10px;
+      width: 10px;
+      transform: rotate(224deg);
+      border-top: 2px solid #000;
+      border-left: 2px solid #000;
+      transition: .2s;
     }
 
-    &--btn::after {
-      transform: rotate(45deg);
-    }
-
-    &--btn::before {
-      transform: rotate(-45deg);
-    }
   }
 
   &__select:hover {
@@ -43,7 +37,7 @@
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
-    box-shadow: 0px 0rem 0.1875rem rgba(0, 0, 0, 0.1019607843);
+    box-shadow: 0 0 0.1875rem rgba(0, 0, 0, 0.1019607843);
 
     &--hidden {
       position: absolute;
@@ -63,6 +57,19 @@
       margin: 3px 0;
       padding: .775rem .625rem;
       transition: .2s;
+
+      &--flex {
+        display: flex;
+        justify-content: space-between;
+
+        &--checked {
+          width: 7px;
+          height: 11px;
+          border: solid #9f9f9f;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
     }
 
     &--item:hover {
