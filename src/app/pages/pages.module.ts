@@ -15,11 +15,13 @@ import { DropdownpageComponent } from "./dropdown-page/dropdown-page.component";
 import { SelectpageComponent } from "./select-page/select-page.component";
 import { TagpageComponent } from "./tag-page/tag-page.component";
 import { BlockstatuspageComponent } from "./block-status-page/block-status-page.component";
+import {SegmentedpageComponent} from "./segmented-page/segmented-page.component";
 
 
 
 @NgModule({
   declarations: [
+    SegmentedpageComponent,
     DropdownpageComponent,
     SelectpageComponent,
     BlockstatuspageComponent,

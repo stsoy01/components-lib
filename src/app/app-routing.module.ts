@@ -11,6 +11,7 @@ import { TagpageComponent } from "./pages/tag-page/tag-page.component";
 import { BlockstatuspageComponent } from "./pages/block-status-page/block-status-page.component";
 import { SelectpageComponent } from './pages/select-page/select-page.component';
 import { DropdownpageComponent } from './pages/dropdown-page/dropdown-page.component';
+import {SegmentedpageComponent} from "./pages/segmented-page/segmented-page.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/buttons', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'calendar', component: CalendarpageComponent },
   { path: 'checkbox', component: CheckboxpageComponent },
   { path: 'elasticcontainer', component: ElasticcontainerpageComponent },
+  { path: 'segmented', component: SegmentedpageComponent },
   { path: 'dialog', component: DialogpageComponent },
   { path: 'dropdown', component: DropdownpageComponent },
   { path: 'select', component: SelectpageComponent },

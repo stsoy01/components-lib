@@ -1,0 +1,21 @@
+.segment {
+  display: flex;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    margin-right: 10px;
+    border-radius: 6px;
+    transition: .3s;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+  }
+
+  &__clicked {
+    transition: .3s;
+    box-shadow: 0.225rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1019607843)
+  }
+}

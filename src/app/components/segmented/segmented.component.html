@@ -1,0 +1,8 @@
+<div class="segment">
+  <div *ngFor="let segment of segmentList; let i = index" class="segment__item"
+       [ngClass]="selectedSegment === i ? 'segment__clicked' : ''"
+       (click)="selectSegment(segment, i)">
+    <h4>{{segment.name}}</h4>
+  </div>
+</div>
+

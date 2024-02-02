@@ -10,11 +10,13 @@ import { AccordionComponent } from "./accordion/accordion/accordion.component";
 import { SelectComponent } from "./select/select.component";
 import { TagComponent } from "./tag/tag.component";
 import { BlockStatusComponent } from "./block-status/block-status.component";
+import {SegmentedComponent} from "./segmented/segmented.component";
 
 
 
 @NgModule({
   declarations: [
+    SegmentedComponent,
     BlockStatusComponent,
     TagComponent,
     OverviewCompomponent,
@@ -27,6 +29,7 @@ import { BlockStatusComponent } from "./block-status/block-status.component";
     SelectComponent
   ],
   exports: [
+    SegmentedComponent,
     SelectComponent,
     BlockStatusComponent,
     TagComponent,

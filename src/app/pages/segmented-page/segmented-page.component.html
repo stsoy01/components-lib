@@ -1,0 +1,19 @@
+<div class="tsPageContainer">
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']"
+               (selectedSection)="getSelecteSection($event)"
+               [ngSwitch]="selectedSwitchSection">
+
+    <div *ngSwitchCase="'Preview'">
+      <ts-segmented></ts-segmented>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      {{'TypeScript'}}
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      {{'HTML'}}
+    </div>
+
+  </ts-overview>
+</div>
