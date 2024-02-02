@@ -34,8 +34,8 @@ import { BlockstatuspageComponent } from "./block-status-page/block-status-page.
     HeaderComponent,
   ],
   imports: [
-    AppRoutingModule,
     CommonModule,
+    AppRoutingModule,
     NgSwitchCase,
     ComponentsModule,
     RouterLink
