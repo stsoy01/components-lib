@@ -19,9 +19,18 @@ export class AccordionComponent {
   @Input()
   public rounded = false;
 
-  public isOpened: number | undefined;
+  public openedSlideIndex: number | undefined;
+  public isOpened: boolean = false;
 
   public openDescription(index: number): void {
-    this.isOpened = index;
+
+    if (this.openedSlideIndex !== index) {
+      this.openedSlideIndex = index;
+      this.isOpened = true
+    } else {
+      this.isOpened = !this.isOpened
+      this.openedSlideIndex = undefined;
+    }
   }
+
 }

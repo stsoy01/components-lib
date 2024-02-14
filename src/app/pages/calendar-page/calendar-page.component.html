@@ -8,7 +8,7 @@
 
     <div *ngSwitchCase="'Preview'">
       <ts-calendar (onSelect)="selectDay($event)"></ts-calendar>
-      <span *ngIf="selectedDate" style="margin-top: 20px; display: inline-block">{{'Дата важного события: '}}<span
+      <span *ngIf="selectedDate" style="margin-top: 20px; display: inline-block">{{'Date to act: '}}<span
         style="font-weight: bold">{{selectedDate}}</span></span>
     </div>
 

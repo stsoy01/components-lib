@@ -9,7 +9,7 @@ import {Component} from "@angular/core";
 export class SegmentedpageComponent {
   public selectedSwitchSection: string | number = 'Preview'
 
-  public getSelecteSection(section: string | number): void {
+  public getSelectedSection(section: string | number): void {
     this.selectedSwitchSection = section;
   }
 }
