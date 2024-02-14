@@ -24,7 +24,6 @@ export class SelectComponent {
 
   public number!: number;
 
-
   public showDropdownList(item?: any): void {
     if (item) {
       this.number = this.dropdownList.indexOf(item)
@@ -38,5 +37,8 @@ export class SelectComponent {
     this.isDropdownShowed = !this.isDropdownShowed
   }
 
+  public outOfSelectDetection(): void {
+    this.isDropdownShowed = false;
+  }
 
 }

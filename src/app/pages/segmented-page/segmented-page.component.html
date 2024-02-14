@@ -1,4 +1,7 @@
 <div class="tsPageContainer">
+  <h2 style="margin-bottom: 5px;">{{'Segmented'}}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component alike tabs switcher'}}</p>
+  <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
   <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']"
                (selectedSection)="getSelecteSection($event)"
                [ngSwitch]="selectedSwitchSection">

@@ -1,17 +1,18 @@
-<span class="tsSelect">
+<span class="tsSelect" tabindex="1" (focusout)="outOfSelectDetection()">
   <div class="tsSelect__select" (click)="showDropdownList()">
     <div>
-      <div *ngIf="title"
-           style="font-size: 11px; color: var(--light-grey); user-select: none;margin-bottom: 5px">{{title}}</div>
+      <div *ngIf="title" style="font-size: 11px; color: var(--light-grey); user-select: none;margin-bottom: 5px">
+        {{title}}
+      </div>
       <span style="user-select: none;">{{placeholder}}</span>
     </div>
     <div class="tsSelect__select--btn" [ngStyle]="{'transform': isDropdownShowed ? 'rotate(45deg)' : ''}"></div>
   </div>
   <div class="tsSelect__dropdown" #itemList
        [ngClass]="!isDropdownShowed ? 'tsSelect__dropdown--hidden' : 'tsSelect__dropdown--showed'">
-    <ul *ngIf="dropdownList.length; else noDropdownData" style="padding: 4px 6px">
-      <li *ngFor="let item of dropdownList;
-          let i = index" class="tsSelect__dropdown--item"
+    <ul *ngIf="dropdownList.length && isDropdownShowed; else noDropdownData" style="padding: 4px 6px">
+      <li *ngFor="let item of dropdownList; let i = index"
+          class="tsSelect__dropdown--item"
           (click)="showDropdownList(item)">
        <div class="tsSelect__dropdown--item--flex">
           <span>{{item.label}}</span>
@@ -19,8 +20,10 @@
        </div>
       </li>
     </ul>
-    <ng-template #noDropdownData>
-      <div class="tsSelect__dropdown--item">{{'no data'}}</div>
-    </ng-template>
-  </div>
+     </div>
 </span>
+
+<ng-template #noDropdownData>
+  <div class="tsSelect__dropdown--item" *ngIf="isDropdownShowed"
+       style="text-align: center; color: #a1a1a1">{{'no data'}}</div>
+</ng-template>
