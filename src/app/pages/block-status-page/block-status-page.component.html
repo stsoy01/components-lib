@@ -8,12 +8,12 @@
                (selectedSection)="getSelectedSection($event)">
 
     <div *ngSwitchCase="'Preview'">
+      <ts-button *ngIf="status !== 200 && !isLoading"
+                 appearance="primary"
+                 (click)="sendGetRequest()">{{'Send GET Request'}}
+      </ts-button>
       <div style="display: flex; justify-content: center">
-        <ts-button *ngIf="status !== 200 && !isLoading"
-          appearance="primary"
-                   (click)="sendGetRequest()">{{'Send GET Request'}}
-        </ts-button>
-        <ts-loader *ngIf="isLoading"><span>{{'Loading...'}}</span></ts-loader>
+         <ts-loader *ngIf="isLoading"><span>{{'Loading...'}}</span></ts-loader>
         <ts-block-status [status]="'404'" *ngIf="status === 200"></ts-block-status>
 <!--                <ts-block-status [status]="'error'"></ts-block-status>-->
       </div>
