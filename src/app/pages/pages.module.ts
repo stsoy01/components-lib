@@ -17,11 +17,13 @@ import { TagpageComponent } from "./tag-page/tag-page.component";
 import { BlockstatuspageComponent } from "./block-status-page/block-status-page.component";
 import {SegmentedpageComponent} from "./segmented-page/segmented-page.component";
 import {ProgressingpageComponent} from "./progressing-page/progressing-page.component";
+import {FieldpageComponent} from "./field-page/field-page.component";
 
 
 
 @NgModule({
   declarations: [
+    FieldpageComponent,
     ProgressingpageComponent,
     SegmentedpageComponent,
     DropdownpageComponent,

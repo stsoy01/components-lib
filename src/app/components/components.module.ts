@@ -12,11 +12,13 @@ import { TagComponent } from "./tag/tag.component";
 import { BlockStatusComponent } from "./block-status/block-status.component";
 import {SegmentedComponent} from "./segmented/segmented.component";
 import {ProgressingComponent} from "./progressing/progressing.component";
+import {FieldComponent} from "./field/field.component";
 
 
 
 @NgModule({
   declarations: [
+    FieldComponent,
     ProgressingComponent,
     SegmentedComponent,
     BlockStatusComponent,
@@ -31,6 +33,7 @@ import {ProgressingComponent} from "./progressing/progressing.component";
     SelectComponent
   ],
   exports: [
+    FieldComponent,
     ProgressingComponent,
     SegmentedComponent,
     SelectComponent,

@@ -17,7 +17,7 @@ export class CheckboxComponent {
   @Output()
   public onChecked: EventEmitter<any> = new EventEmitter<any>()
 
-  public getChackBox(data: any): void {
+  public getCheckBox(data: any): void {
     this.onChecked.emit(data.target.checked)
   }
 }

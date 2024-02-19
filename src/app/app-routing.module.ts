@@ -12,6 +12,7 @@ import {SelectpageComponent} from './pages/select-page/select-page.component';
 import {DropdownpageComponent} from './pages/dropdown-page/dropdown-page.component';
 import {SegmentedpageComponent} from "./pages/segmented-page/segmented-page.component";
 import {ProgressingpageComponent} from "./pages/progressing-page/progressing-page.component";
+import {FieldpageComponent} from "./pages/field-page/field-page.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/accordion', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'dialog', component: DialogpageComponent},
   {path: 'dropdown', component: DropdownpageComponent},
   {path: 'select', component: SelectpageComponent},
+  {path: 'field', component: FieldpageComponent},
   {path: 'blockstatus', component: BlockstatuspageComponent},
   {path: 'tag', component: TagpageComponent},
 ]
