@@ -1,15 +1,21 @@
 <div class="tsPageContainer" style="align-items: center">
   <h2 style="margin-bottom: 5px;">{{'Block Status'}}</h2>
-  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for notifying the user. Depending on the status, notifications will have different pictures and information.'}}</p>
+  <p
+    style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for notifying the user. Depending on the status, notifications will have different pictures and information.'}}</p>
   <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
 
   <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
-               (selectedSection)="getSelecteSection($event)">
+               (selectedSection)="getSelectedSection($event)">
 
     <div *ngSwitchCase="'Preview'">
       <div style="display: flex; justify-content: center">
-        <ts-block-status [status]="'404'"></ts-block-status>
-        <ts-block-status [status]="'error'"></ts-block-status>
+        <ts-button *ngIf="status !== 200 && !isLoading"
+          appearance="primary"
+                   (click)="sendGetRequest()">{{'Send GET Request'}}
+        </ts-button>
+        <ts-loader *ngIf="isLoading"><span>{{'Loading...'}}</span></ts-loader>
+        <ts-block-status [status]="'404'" *ngIf="status === 200"></ts-block-status>
+<!--                <ts-block-status [status]="'error'"></ts-block-status>-->
       </div>
     </div>
 
