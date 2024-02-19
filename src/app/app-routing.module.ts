@@ -14,7 +14,7 @@ import {SegmentedpageComponent} from "./pages/segmented-page/segmented-page.comp
 import {ProgressingpageComponent} from "./pages/progressing-page/progressing-page.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/buttons', pathMatch: 'full'},
+  {path: '', redirectTo: '/accordion', pathMatch: 'full'},
   {path: 'buttons', component: ButtonpageComponent},
   {path: 'accordion', component: AccordionpageComponent},
   {path: 'calendar', component: CalendarpageComponent},

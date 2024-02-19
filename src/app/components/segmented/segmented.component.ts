@@ -13,7 +13,10 @@ export class SegmentedComponent {
 
   public selectedSegment!: number;
 
-  public selectSegment(segment: any, index: number) {
+  public selectSegment(segment: any, index: number, event: any) {
+    console.log(index)
+    console.log(segment)
+    console.log(event)
     this.selectedSegment = this.segmentList.indexOf(segment);
   }
 
