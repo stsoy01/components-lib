@@ -1,0 +1,6 @@
+<div *ngIf="mask === 'email'"
+     class="tsInput" id="tsInput"
+     (click)="setCursor()">
+  <span contenteditable="true" (keyup)="getTypedValue($event)" style="outline: none"></span>
+  <span contenteditable="false" style="color: var(--light-grey)">{{'@gmail.com'}}</span>
+</div>

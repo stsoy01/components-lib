@@ -14,11 +14,13 @@ import {SegmentedComponent} from "./segmented/segmented.component";
 import {ProgressingComponent} from "./progressing/progressing.component";
 import {FieldComponent} from "./field/field.component";
 import {LoaderComponent} from "./loader/loader.component";
+import {InputComponent} from "./input/input.component";
 
 
 
 @NgModule({
   declarations: [
+    InputComponent,
     LoaderComponent,
     FieldComponent,
     ProgressingComponent,
@@ -35,6 +37,7 @@ import {LoaderComponent} from "./loader/loader.component";
     SelectComponent
   ],
   exports: [
+    InputComponent,
     LoaderComponent,
     FieldComponent,
     ProgressingComponent,

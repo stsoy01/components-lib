@@ -8,18 +8,23 @@
                (selectedSection)="selectedSwitchSection($event)">
 
     <div *ngSwitchCase="'Preview'">
-
       <ts-field [name]="'It`s Dropdownlist'">
         <ts-select [title]="'Field demonstration'"
                    [placeholder]="'Select value'"
                    [dropdownList]="[{label: 'Germany', value: 1},{label: 'Spain', value: 2},{label: 'Greece', value: 3}]">
         </ts-select>
       </ts-field>
+
       <div style="margin: 40px 0"></div>
+
       <ts-field [name]="'It`s Checkbox'">
         <ts-checkbox>{{'Try to disagree'}}</ts-checkbox>
       </ts-field>
-
+      <div style="margin: 40px 0"></div>
+      <ts-field [name]="'E-Mail'">
+        <ts-input [mask]="'email'">
+        </ts-input>
+      </ts-field>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
