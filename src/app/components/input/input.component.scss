@@ -1,17 +1,31 @@
 .tsInput {
-  min-height: 40px;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.1019607843);
-  transition: 0.2s;
+  position: relative;
+
+  &__input {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    z-index: 200;
+    box-shadow: 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.1019607843);
+  }
+
+  &__input:focus + &__placeholder {
+    top: 2px;
+    transition: 0.2s;
+    font-size: 11px;
+  }
+
+  &__placeholder {
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    transition: 0.2s;
+    color: var(--light-grey);
+  }
 }
 
-.tsInput:hover {
-  cursor: text;
-  box-shadow: 0 0.22rem 0.1875rem rgba(0, 0, 0, 0.1019607843);
-  transition: 0.2s;
-}
-
-.tsInput:focus {
-  outline: none;
+.propClass {
+  top: 2px;
+  font-size: 11px;
 }

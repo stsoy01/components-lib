@@ -13,6 +13,7 @@ import {DropdownpageComponent} from './pages/dropdown-page/dropdown-page.compone
 import {SegmentedpageComponent} from "./pages/segmented-page/segmented-page.component";
 import {ProgressingpageComponent} from "./pages/progressing-page/progressing-page.component";
 import {FieldpageComponent} from "./pages/field-page/field-page.component";
+import { InputpageComponent } from './pages/input-page/input-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/accordion', pathMatch: 'full'},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'elasticcontainer', component: ElasticcontainerpageComponent},
   {path: 'segmented', component: SegmentedpageComponent},
   {path: 'progressing', component: ProgressingpageComponent},
+  {path: 'input', component: InputpageComponent},
   {path: 'dialog', component: DialogpageComponent},
   {path: 'dropdown', component: DropdownpageComponent},
   {path: 'select', component: SelectpageComponent},

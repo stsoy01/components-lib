@@ -1,0 +1,26 @@
+<div class="tsPageContainer">
+  <h2 style="margin-bottom: 5px">{{ "Field" }}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">
+    {{ "A Component that inserts a header to other components." }}
+  </p>
+  <h3 style="margin-bottom: 10px">{{ "Overview" }}</h3>
+
+  <ts-overview
+    [linkList]="['Preview', 'TypeScript', 'HTML']"
+    [ngSwitch]="selectedSection"
+    (selectedSection)="selectedSwitchSection($event)"
+  >
+    <div *ngSwitchCase="'Preview'">
+      <ts-field [name]="'E-mail'">
+        <ts-input
+          [placeholder]="'Enter an email'"
+          (onChange)="get1($event)"
+        ></ts-input>
+      </ts-field>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">TypeScript</div>
+
+    <div *ngSwitchCase="'HTML'">HTML</div>
+  </ts-overview>
+</div>

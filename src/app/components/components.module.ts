@@ -14,7 +14,8 @@ import {SegmentedComponent} from "./segmented/segmented.component";
 import {ProgressingComponent} from "./progressing/progressing.component";
 import {FieldComponent} from "./field/field.component";
 import {LoaderComponent} from "./loader/loader.component";
-import {InputComponent} from "./input/input.component";
+import { InputComponent } from "./input/input.component";
+
 
 
 

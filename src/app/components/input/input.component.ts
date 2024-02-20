@@ -1,5 +1,5 @@
-import {Component, Input} from "@angular/core";
-import {range} from "rxjs";
+import {Component, EventEmitter, Input} from "@angular/core";
+
 
 @Component({
   selector: 'ts-input',
@@ -9,25 +9,15 @@ import {range} from "rxjs";
 
 export class InputComponent {
 
-  @Input()
-  public mask!: string;
+  public inputString!: string;
+  public onChange: EventEmitter<any> = new EventEmitter();
 
   @Input()
-  public innerText: string = 'example';
+  public placeholder!: string;
 
-  public getTypedValue(event: any): void {
-    this.innerText = event.target.innerText;
-    console.log(event.target.innerText)
+  public getInputValue(event: any): void {
+    this.inputString = event.target.value;    
+    this.onChange.emit(this.inputString)    
   }
-
-
-  public setCursor(): void {
-    let cursor = document.getElementById('tsInput');
-    let range = document.createRange();
-    range.setStart(cursor!.childNodes[0], 0)
-    range.collapse(true);
-    let sel = window.getSelection();
-    sel!.removeAllRanges()
-    sel!.addRange(range)
-  }
+  
 }
