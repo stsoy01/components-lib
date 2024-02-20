@@ -12,10 +12,11 @@
   >
     <div *ngSwitchCase="'Preview'">
       <ts-field [name]="'E-mail'">
-        <ts-input
-          [placeholder]="'Enter an email'"
-          (onChange)="get1($event)"
-        ></ts-input>
+        <ts-input [placeholder]="'Enter an email'" (onChange)="get1($event)"></ts-input>
+      </ts-field>
+
+      <ts-field [name]="'Country'">
+        <ts-input (onChange)="get2($event)"></ts-input>
       </ts-field>
     </div>
 

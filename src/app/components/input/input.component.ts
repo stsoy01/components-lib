@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input} from "@angular/core";
+import {Component, EventEmitter, Input, Output} from "@angular/core";
 
 
 @Component({
@@ -10,8 +10,9 @@ import {Component, EventEmitter, Input} from "@angular/core";
 export class InputComponent {
 
   public inputString!: string;
-  public onChange: EventEmitter<any> = new EventEmitter();
-
+  
+  @Output()
+  public onChange: EventEmitter<any> = new EventEmitter<any>();
   @Input()
   public placeholder!: string;
 

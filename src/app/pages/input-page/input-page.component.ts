@@ -17,4 +17,8 @@ export class InputpageComponent {
     console.log('data1', data);
   }
 
+  public get2(data: any): void {
+    console.log('country', data);
+  }
+
 }
