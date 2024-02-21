@@ -1,4 +1,5 @@
 <div class="tsInput">
-  <input class="tsInput__input" (keyup)="getInputValue($event)">
+  <input class="tsInput__input" (keyup)="getInputValue($event)" [value]="inputString">
   <span class="tsInput__placeholder" [ngClass]="inputString ? 'propClass' : ''">{{placeholder}}</span>
+  <span class="tsInput__close-btn" *ngIf="clear && inputString" (click)="clearInoutString()"></span>
 </div>

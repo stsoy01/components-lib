@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-
 @Component({
   selector: 'input-page',
   templateUrl: './input-page.component.html',
@@ -9,6 +8,7 @@ import { Component } from "@angular/core";
 export class InputpageComponent {
   public selectedSection: string | number = 'Preview';
 
+
   public selectedSwitchSection(section: string | number): void {
     this.selectedSection = section;
   }
@@ -17,8 +17,9 @@ export class InputpageComponent {
     console.log('data1', data);
   }
 
-  public get2(data: any): void {
-    console.log('country', data);
+  public readFile(): void {
+
   }
+
 
 }

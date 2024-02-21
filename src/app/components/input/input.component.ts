@@ -9,16 +9,24 @@ import {Component, EventEmitter, Input, Output} from "@angular/core";
 
 export class InputComponent {
 
-  public inputString!: string;
-  
-  @Output()
-  public onChange: EventEmitter<any> = new EventEmitter<any>();
+  public inputString: string = '';
+
   @Input()
   public placeholder!: string;
+  @Input()
+  public clear: boolean = false;
+
+
+  @Output()
+  public onChange: EventEmitter<any> = new EventEmitter<any>();
 
   public getInputValue(event: any): void {
-    this.inputString = event.target.value;    
-    this.onChange.emit(this.inputString)    
+    this.inputString = event.target.value;
+    this.onChange.emit(this.inputString)
   }
-  
+
+  public clearInoutString(): void {
+    this.inputString = '';
+  }
+
 }

@@ -12,16 +12,22 @@
   >
     <div *ngSwitchCase="'Preview'">
       <ts-field [name]="'E-mail'">
-        <ts-input [placeholder]="'Enter an email'" (onChange)="get1($event)"></ts-input>
+        <ts-input [placeholder]="'Enter an email'"
+                  [clear]="true"
+                  (onChange)="get1($event)"></ts-input>
       </ts-field>
 
-      
+
 
 
     </div>
 
-    <div *ngSwitchCase="'TypeScript'">TypeScript</div>
+    <div *ngSwitchCase="'TypeScript'">
+      <button (click)="readFile()">{{'Read file'}}</button>
+    </div>
 
     <div *ngSwitchCase="'HTML'">HTML</div>
   </ts-overview>
 </div>
+
+

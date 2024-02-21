@@ -12,7 +12,6 @@ export class DialogComponent {
   @Input()
   public id!: string;
 
-
   constructor(public dialogService: DialogService) {
   }
 
