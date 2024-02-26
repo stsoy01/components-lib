@@ -8,26 +8,47 @@
   <ts-overview
     [linkList]="['Preview', 'TypeScript', 'HTML']"
     [ngSwitch]="selectedSection"
-    (selectedSection)="selectedSwitchSection($event)"
-  >
+    (selectedSection)="selectedSwitchSection($event)">
+
     <div *ngSwitchCase="'Preview'">
-      <ts-field [name]="'E-mail'">
-        <ts-input [placeholder]="'Enter an email'"
-                  [clear]="true"
-                  (onChange)="get1($event)"></ts-input>
+
+      <ts-field [name]="'Default input'">
+        <ts-input
+          [placeholder]="'Enter a value'"
+          [clear]="true"
+          (onChange)="getDefaultValue($event)">
+        </ts-input>
       </ts-field>
 
+      <div style="margin: 20px 0;"></div>
 
+      <ts-field [name]="'Password'">
+        <ts-input [placeholder]="'Enter your password'"
+                  [mode]="'password'"
+                  (onChange)="getPinCode($event)"
+                  [clear]="true">
+        </ts-input>
+      </ts-field>
+
+      <div style="margin: 20px 0;"></div>
+
+      <ts-field [name]="'Bank Card'">
+        <ts-input [placeholder]="'Enter your Bank Card'"
+        class="probe"
+                  [mode]="'bank_card'"
+                  (onChange)="getBankCardNumber($event)"
+                  [clear]="true">
+        <ts-icon iconUrl [url]="url"></ts-icon>
+        </ts-input>
+      </ts-field>
 
 
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
-      <button (click)="readFile()">{{'Read file'}}</button>
+      <button (click)="readFile()">{{ "Read file" }}</button>
     </div>
 
     <div *ngSwitchCase="'HTML'">HTML</div>
   </ts-overview>
 </div>
-
-

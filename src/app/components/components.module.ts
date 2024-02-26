@@ -15,12 +15,16 @@ import {ProgressingComponent} from "./progressing/progressing.component";
 import {FieldComponent} from "./field/field.component";
 import {LoaderComponent} from "./loader/loader.component";
 import { InputComponent } from "./input/input.component";
+import { IconComponent } from "./icon/icon.component";
+import { IconDirective } from "./icon/directive/icon.directive";
 
 
 
 
 @NgModule({
   declarations: [
+    IconDirective,
+    IconComponent,
     InputComponent,
     LoaderComponent,
     FieldComponent,
@@ -38,6 +42,8 @@ import { InputComponent } from "./input/input.component";
     SelectComponent
   ],
   exports: [
+    IconDirective,
+    IconComponent,
     InputComponent,
     LoaderComponent,
     FieldComponent,

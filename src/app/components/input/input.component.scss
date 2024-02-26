@@ -3,7 +3,8 @@
 
   &__input {
     position: relative;
-    padding: 1rem;
+    padding: 1rem 4rem 1rem 1rem;
+    min-height: 48px;
     width: 100%;
     outline: none;
     border: none;
@@ -43,13 +44,14 @@
     cursor: pointer;
   }
 
-  &__close-btn::before, &__close-btn::after {
+  &__close-btn::before,
+  &__close-btn::after {
     content: "";
     position: absolute;
     top: 7px;
     width: 16px;
     border: 1px solid var(--light-grey);
-    transition: .2s;
+    transition: 0.2s;
   }
 
   &__close-btn::after {
@@ -60,9 +62,26 @@
     transform: rotate(45deg);
   }
 
-  &__close-btn:hover:before, &__close-btn:hover:after {
+  &__close-btn:hover:before,
+  &__close-btn:hover:after {
     border-color: #767676;
-    transition: .2s;
+    transition: 0.2s;
+  }
+
+  &__view-icon {
+    position: absolute;
+    top: 16px;
+    right: 36px;
+    width: 20px;
+    height: 16px;
+    background-image: url("../../../assets/icons/open-eye.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 11;
+  }
+
+  &__view-icon:hover {
+    cursor: pointer;
   }
 }
 
@@ -70,3 +89,24 @@
   top: 2px;
   font-size: 11px;
 }
+
+input.hidePassword {
+  font-family: "password";
+  color: rgb(59, 59, 59);
+}
+
+input.showPassword {
+  font-family: "Montserrat", sans-serif;
+}
+
+// @mixin backgroundUrl($card_type){
+//   @if $card_type == 'visa' {
+
+//   }@else if $card_type == 'mastercard' {
+
+//   }@else if $card_type == 'amercian_express' {
+
+//   }@else {
+    
+//   }
+// }

@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
 })
 
 export class InputpageComponent {
+
+  public url: string = './directive/probe.png'
   public selectedSection: string | number = 'Preview';
 
 
@@ -13,9 +15,19 @@ export class InputpageComponent {
     this.selectedSection = section;
   }
 
-  public get1(data: any): void {
-    console.log('data1', data);
+  public getDefaultValue(data: any): void {
+    console.log('default', data);
   }
+
+  public getPinCode(data: any): void {
+    console.log('pin_code', data);
+  }
+
+  public getBankCardNumber(data: any): void {
+    console.log('bank-card:', data);
+    
+  }
+
 
   public readFile(): void {
 
