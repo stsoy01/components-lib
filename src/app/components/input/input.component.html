@@ -15,7 +15,8 @@
          class="tsInput__input"
          (keyup)="getInputValue($event, 'bank_card')"
          (keydown)="checkBankCardDigit($event)">
-  <ng-content></ng-content>
+  <ts-icon *ngIf="mode === 'bank_card' && inputString.length !== 0">
+  </ts-icon>
 
   <span class="tsInput__placeholder" 
          [ngClass]="inputString ? 'propClass' : ''">

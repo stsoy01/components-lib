@@ -16,13 +16,12 @@ import {FieldComponent} from "./field/field.component";
 import {LoaderComponent} from "./loader/loader.component";
 import { InputComponent } from "./input/input.component";
 import { IconComponent } from "./icon/icon.component";
-import { IconDirective } from "./icon/directive/icon.directive";
-
-
-
+import { IconDirective } from "./icon/icon.directive";
+import { FieldsetComponent } from "./fieldset/fieldset.component";
 
 @NgModule({
   declarations: [
+    FieldsetComponent,
     IconDirective,
     IconComponent,
     InputComponent,
@@ -42,6 +41,7 @@ import { IconDirective } from "./icon/directive/icon.directive";
     SelectComponent
   ],
   exports: [
+    FieldsetComponent,
     IconDirective,
     IconComponent,
     InputComponent,

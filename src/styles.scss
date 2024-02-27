@@ -1,24 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body {
-  background: var(--white_background);
-}
 
-body.dark-theme {
-  background: #121212;
-}
 
 :root {
-  //backgrounds
+  // sidebar
+  --sidebar_background: #e9ecef;
+
+  //butons
   --accent_btn: #e16e49;
   --primary_btn: #526ed3;
-  --white_background: #fff;
+  
+  
   --light-grey: #acacac;
 
-
-  //font-color
-  --white_color: #d5d5d5;
+  
+  
 }
+
+[theme="dark"] {
+  --sidebar_background: rgb(24, 24, 24);
+
+
+  //buttons
+  --primary_btn: #526ed3;
+  --accent_btn: #e16e49;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * {
   padding: 0;
@@ -32,12 +52,4 @@ body.dark-theme {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-}
-
-
-@font-face {
-  font-family: 'password';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
 }

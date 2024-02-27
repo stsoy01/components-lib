@@ -1,0 +1,17 @@
+.tsFieldset {
+  position: relative;
+  min-height: 20px;
+  height: fit-content;
+  padding: 14px 13px;
+  border-radius: 8px;
+  border: 1px solid var(--light-grey);
+
+  &__legend {
+    position: absolute;
+    top: -9px;
+    left: 20px;
+    padding: 0 5px;
+    background: white;
+    font-size: 14px;
+  }
+}

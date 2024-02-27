@@ -12,7 +12,8 @@ type InputTypes = 'bank_card' |'password' | 'email' | 'phone' | 'postal_code' | 
 
 export class InputComponent {
 
-  public inputString: string = '';  
+  public inputString: string = ''; 
+  public bankName: string = '';
 
   @Input()
   public mode: InputTypes = 'default';
@@ -29,6 +30,21 @@ export class InputComponent {
    * @param event 
    */
   public getInputValue(event: any, type?: string): void {   
+    switch(event.target.value) {
+      case '4':
+        this.bankName = 'visa';
+        break;
+      case '5':
+        this.bankName = 'mastercard';
+        break;
+      case '3':
+        this.bankName = 'american_express';
+        break;
+      default:
+        this.bankName = 'default';
+        break;
+    }
+    
     if(type === 'bank_card') {    
       event.target.value = event.target.value.replace(/\D/g, "");
       event.target.value = event.target.value.replace(/^(\d{12})(\d)/gm, "$1-$2");
@@ -66,7 +82,7 @@ export class InputComponent {
    * 
    * @param event 
    */
-  public checkBankCardDigit(event: any): void {    
+  public checkBankCardDigit(event: any): void {     
     if(event.which === 8) {   
       event.returnValue = true;
       return;

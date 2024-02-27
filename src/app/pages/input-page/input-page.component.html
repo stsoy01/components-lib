@@ -34,11 +34,10 @@
 
       <ts-field [name]="'Bank Card'">
         <ts-input [placeholder]="'Enter your Bank Card'"
-        class="probe"
+                  class="probe"
                   [mode]="'bank_card'"
                   (onChange)="getBankCardNumber($event)"
                   [clear]="true">
-        <ts-icon iconUrl [url]="url"></ts-icon>
         </ts-input>
       </ts-field>
 

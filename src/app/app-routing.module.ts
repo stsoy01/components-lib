@@ -14,6 +14,7 @@ import {SegmentedpageComponent} from "./pages/segmented-page/segmented-page.comp
 import {ProgressingpageComponent} from "./pages/progressing-page/progressing-page.component";
 import {FieldpageComponent} from "./pages/field-page/field-page.component";
 import { InputpageComponent } from './pages/input-page/input-page.component';
+import { FieldsetpageComponent } from './pages/fieldset-page/fieldset-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/accordion', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'segmented', component: SegmentedpageComponent},
   {path: 'progressing', component: ProgressingpageComponent},
   {path: 'input', component: InputpageComponent},
+  {path: 'fieldset', component: FieldsetpageComponent},
   {path: 'dialog', component: DialogpageComponent},
   {path: 'dropdown', component: DropdownpageComponent},
   {path: 'select', component: SelectpageComponent},

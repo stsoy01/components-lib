@@ -16,15 +16,15 @@ export class InputpageComponent {
   }
 
   public getDefaultValue(data: any): void {
-    console.log('default', data);
+    // console.log('default', data);
   }
 
   public getPinCode(data: any): void {
-    console.log('pin_code', data);
+    // console.log('pin_code', data);
   }
 
   public getBankCardNumber(data: any): void {
-    console.log('bank-card:', data);
+    // console.log('bank-card:', data);
     
   }
 
