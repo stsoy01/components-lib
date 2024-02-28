@@ -1,5 +1,6 @@
 .tsSelect {
   position: relative;
+  color: var(--primary__text);
 
   &__select {
     display: flex;
@@ -10,6 +11,7 @@
     box-shadow: 0 0.125rem 0.1875rem #0000001a;
     border: 1px solid #ededed;
     transition: .2s;
+    background: var(--select_background);
 
     &--btn {
       height: 10px;
@@ -35,14 +37,14 @@
   &__dropdown {
     width: 100%;
     border-radius: 8px;
-    background-color: #fff;
     border: 1px solid #e5e5e5;
+    background: var(--select_background);
     box-shadow: 0 0 0.1875rem rgba(0, 0, 0, 0.1019607843);
 
     &--hidden {
       position: absolute;
       top: 50px;
-      transition: .2s;
+      transition: .1s;
       opacity: 0;
     }
 
@@ -50,7 +52,7 @@
       position: absolute;
       top: 65px;
       z-index: 1000;
-      transition: .2s;
+      transition: .1s;
     }
 
     &--item {
@@ -75,7 +77,7 @@
     &--item:hover {
       cursor: pointer;
       border-radius: 8px;
-      background-color: #f8f8f8;
+      background-color: var(--select_background_hover);
       transition: .2s;
     }
   }

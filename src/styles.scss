@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://db.onlinewebfonts.com/c/51b459eae74df5b00ba922028ccb20be?family=Password');
 
 
 :root {
@@ -15,8 +15,12 @@
   --light-grey: #acacac;
   --border_color: #cecece;
   --heading_title: #000000;
-  --accordion_blackground: #fff;
-  --overview_background: rgb(244 244 244 / 34%)
+  --accordion_background: #fff;
+  --overview_background: rgb(244 244 244 / 34%);
+  --dialog_background: #fff;
+  --select_background: #fff;
+  --select_background_hover: #f8f8f8;
+  --input_border: transparent;
 
 
 
@@ -35,8 +39,12 @@
   --primary__desc: #B0B8C4;
   --border_color: rgba(59, 74, 89);
   --heading_title: rgb(102, 178, 255);
-  --accordion_blackground: #2c2c2c52;
+  --accordion_background: #2c2c2c52;
   --overview_background:  rgb(15, 25, 36);
+  --dialog_background:  rgb(15, 25, 36);
+  --select_background: #1c2432;
+  --select_background_hover: rgba(74, 101, 145, 0.24);
+  --input_border: rgba(59, 74, 89);
 
 }
 

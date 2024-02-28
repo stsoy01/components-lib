@@ -8,7 +8,7 @@
     <button class="ts-calendar__header-next ts-calendar__header-btn" (click)="setNextMonth()"></button>
   </div>
   <div class="ts-calendar__body">
-    <div [ngStyle]="{width: '252px'}">
+    <div [ngStyle]="{width: '267px'}">
       <ul class="ts-calendar__body-heading">
         <li class="ts-calendar__body-caption">{{'Пн'}}</li>
         <li class="ts-calendar__body-caption">{{'Вт'}}</li>
@@ -18,7 +18,7 @@
         <li class="ts-calendar__body-caption">{{'Сб'}}</li>
         <li class="ts-calendar__body-caption">{{'Вск'}}</li>
       </ul>
-      <ul style="display: flex; flex-wrap: wrap">
+      <ul style="display: flex; flex-wrap: wrap; justify-content: space-between">
         <li *ngFor="let day of mothDaysArr; let i = index;"
             class="ts-calendar__body-day"
             [ngStyle]="{color: day.status === 'next' || day.status === 'prev' ? '#a7a7a7' : 'var(--primary__text)'}"

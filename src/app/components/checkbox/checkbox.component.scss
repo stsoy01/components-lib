@@ -4,6 +4,7 @@
   width: fit-content;
   padding-left: 25px;
   user-select: none;
+  color: var(--primary__text);
 
   &__markedElement {
     position: absolute;
@@ -44,12 +45,12 @@
   position: absolute;
 }
 
-.checkbox .checkbox__markedElement:after {
+.checkbox input:checked ~ .checkbox__markedElement:after {
   left: 7px;
   top: 4px;
   width: 3px;
   height: 7px;
-  border: solid white;
+  border: solid #fff;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

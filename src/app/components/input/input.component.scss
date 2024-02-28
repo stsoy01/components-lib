@@ -4,10 +4,11 @@
   &__input {
     position: relative;
     padding: 1rem 4rem 1rem 1rem;
-    min-height: 48px;
+    min-height: 50px;
     width: 100%;
     outline: none;
-    border: none;
+    border: 1px solid var(--input_border);
+    color: var(--primary__text);
     border-radius: 8px;
     z-index: 10;
     background-color: transparent;
@@ -15,7 +16,8 @@
   }
 
   &__input:focus + &__placeholder {
-    top: 2px;
+    top: 4px;
+    line-height: 14px;
     transition: 0.2s;
     font-size: 11px;
   }
@@ -86,13 +88,14 @@
 }
 
 .propClass {
-  top: 2px;
+  top: 4px;
+  line-height: 14px;
   font-size: 11px;
 }
 
 input.hidePassword {
-  font-family: "password";
-  color: rgb(59, 59, 59);
+  font-family: "Password";
+  color: var(--primary__text)
 }
 
 input.showPassword {
@@ -107,6 +110,6 @@ input.showPassword {
 //   }@else if $card_type == 'amercian_express' {
 
 //   }@else {
-    
+
 //   }
 // }

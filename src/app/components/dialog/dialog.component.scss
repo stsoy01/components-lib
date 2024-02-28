@@ -19,7 +19,7 @@
     height: fit-content;
     padding: 20px 15px;
     border-radius: 12px;
-    background-color: #fff;
+    background-color: var(--dialog_background);
 
     &__btn {
       position: absolute;

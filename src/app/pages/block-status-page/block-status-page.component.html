@@ -13,9 +13,9 @@
                  (click)="sendGetRequest()">{{'Send GET Request'}}
       </ts-button>
       <div style="display: flex; justify-content: center">
-         <ts-loader *ngIf="isLoading"><span>{{'Loading...'}}</span></ts-loader>
+        <ts-loader *ngIf="isLoading"><span style="color: var(--primary__text)">{{'Loading...'}}</span></ts-loader>
         <ts-block-status [status]="'404'" *ngIf="status === 200"></ts-block-status>
-<!--                <ts-block-status [status]="'error'"></ts-block-status>-->
+        <!--                <ts-block-status [status]="'error'"></ts-block-status>-->
       </div>
     </div>
 
