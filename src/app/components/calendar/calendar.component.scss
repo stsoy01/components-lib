@@ -64,8 +64,7 @@
     }
 
     &-day:hover {
-      background: rgba(22, 75, 255, 0.7);
-      ;
+      background: rgba(22, 75, 255, 0.7);;
       cursor: pointer;
       border-radius: 30%;
       color: var(--white_color) !important;
@@ -87,8 +86,7 @@ button:hover {
 
 .colorMe {
   color: var(--white_color) !important;
-  background: rgba(22, 75, 255, 0.7);
-  ;
+  background: rgba(22, 75, 255, 0.7);;
   cursor: pointer;
   border-radius: 30%;
 }

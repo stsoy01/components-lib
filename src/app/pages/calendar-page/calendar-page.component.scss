@@ -1,0 +1,12 @@
+.tsPageContainer {
+  background-color: var(--sidebar_background);
+  min-height: calc(100vh - 50px);
+}
+
+.tsPageContainer p {
+  color: var(--primary__desc);
+}
+
+.tsPageContainer h2, .tsPageContainer h3 {
+  color: var(--primary__text);
+}

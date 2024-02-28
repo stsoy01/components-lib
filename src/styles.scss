@@ -9,21 +9,30 @@
   //butons
   --accent_btn: #e16e49;
   --primary_btn: #526ed3;
-  
-  
-  --light-grey: #acacac;
 
-  
-  
+  --primary__text: #000000;
+  --primary__desc: #000000;
+  --light-grey: #acacac;
+  --border_color: #1a1a1a;
+  --heading_title: #000000;
+
+
+
 }
 
 [theme="dark"] {
-  --sidebar_background: rgb(24, 24, 24);
+  --sidebar_background: rgb(16, 20, 24);
 
 
   //buttons
   --primary_btn: #526ed3;
   --accent_btn: #e16e49;
+
+
+  --primary__text: #F3F6F9;
+  --primary__desc: #B0B8C4;
+  --border_color: rgba(59, 74, 89);
+  --heading_title: rgb(102, 178, 255);
 }
 
 

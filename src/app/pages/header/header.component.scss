@@ -1,7 +1,38 @@
 .tsHeader {
+  position: sticky;
+  top: 0;
   width: 100%;
-  height: fit-content;
-  min-height: 50px;
-  background-color: inherit;
-  border-right: 5px solid #6c757d;
+  height: 50px;
+  padding: 0 2rem;
+  backdrop-filter: blur(2px);
+
+  &__flexbox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: right;
+
+    &__theme {
+      width: fit-content;
+      padding-left: 30px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      color: var(--primary__text);
+    }
+
+    &__theme--light {
+      background-image: url("./img/sun1.png");
+    }
+
+    &__theme--dark {
+      background-image: url("./img/moon.png");
+    }
+
+
+    &__theme:hover {
+      cursor: pointer;
+      user-select: none;
+    }
+  }
 }

@@ -4,7 +4,7 @@
     <h3 >{{item.title}}</h3>
     <span class="ts-accordion_container-arrow" [ngClass]="openedSlideIndex === i && isOpened ? 'rotate' : ''"></span>
   </div>
-  <div class="ts-accordion_desc">
+  <div class="ts-accordion_desc" [ngClass]="[(rounded) ? 'lastRounded': '']">
     <p [ngClass]="openedSlideIndex === i && isOpened ? 'opened' : 'closed'">{{item.text}}</p>
   </div>
 </div>

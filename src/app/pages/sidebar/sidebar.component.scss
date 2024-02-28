@@ -1,6 +1,6 @@
 .tsSidebar {
   display: flex;
-  
+
   &_logo {
     display: inline-block;
     width: 100px;
@@ -21,10 +21,18 @@
     box-shadow: 11px 0px 17px -9px rgba(34, 60, 80, 0.27);
     //background: #6e83cd;
 
+    &--creator {
+      color: var(--heading_title)
+    }
+
     &-list {}
 
     &-item {
       margin-bottom: 10px;
+    }
+
+    &-item  span{
+      color: var(--primary__text);
     }
 
     &-item a {
@@ -36,6 +44,8 @@
     }
   }
 
-  &_rightBox {
+  &_rightbox {
+    background-color: var(--sidebar_background);
+    z-index: 2000;
   }
 }

@@ -2,6 +2,8 @@ h3 {
   width: 100%;
   padding-bottom: 10px;
   list-style: none;
+  font-weight: 500;
+  color: var(--primary__text);
 }
 
 .closed {
@@ -20,7 +22,7 @@ h3 {
 
 .ts-accordion {
   min-width: 316px;
-  border: 1px solid black;
+  border: 1px solid var(--border_color);
 
   &_container {
     display: flex;
@@ -33,14 +35,16 @@ h3 {
       display: block;
       width: 10px;
       height: 10px;
-      border-top: 2px solid #000;
-      border-left: 2px solid #000;
+      border-top: 2px solid var(--primary__text);
+      border-left: 2px solid var(--primary__text);
       transition: .4s;
     }
   }
 
   &_desc {
     padding: 0 20px;
+    color: var(--primary__desc);
+    font-weight: 400;
   }
 }
 
@@ -68,4 +72,9 @@ div:not(:first-child) {
 .not-rounded:first-child {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+}
+
+.lastRoundedAdd {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

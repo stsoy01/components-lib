@@ -1,2 +1,9 @@
 <div class="tsHeader">
+  <div class="tsHeader__flexbox">
+    <div class="tsHeader__flexbox__theme"
+         (click)="switchColorTheme()"
+         [ngClass]="[(theme === 'dark') ? 'tsHeader__flexbox__theme--dark' : 'tsHeader__flexbox__theme--light']">
+      {{theme === 'dark' ? 'Dark mode' : 'Light mode'}}
+    </div>
+  </div>
 </div>
