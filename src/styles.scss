@@ -4,7 +4,7 @@
 
 :root {
   // sidebar
-  --sidebar_background: #e9ecef;
+  --sidebar_background: transparent;
 
   //butons
   --accent_btn: #e16e49;
@@ -13,8 +13,10 @@
   --primary__text: #000000;
   --primary__desc: #000000;
   --light-grey: #acacac;
-  --border_color: #1a1a1a;
+  --border_color: #cecece;
   --heading_title: #000000;
+  --accordion_blackground: #fff;
+  --overview_background: rgb(244 244 244 / 34%)
 
 
 
@@ -33,6 +35,9 @@
   --primary__desc: #B0B8C4;
   --border_color: rgba(59, 74, 89);
   --heading_title: rgb(102, 178, 255);
+  --accordion_blackground: #2c2c2c52;
+  --overview_background:  rgb(15, 25, 36);
+
 }
 
 

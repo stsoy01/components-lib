@@ -23,6 +23,7 @@ h3 {
 .ts-accordion {
   min-width: 316px;
   border: 1px solid var(--border_color);
+  background-color: var(--accordion_blackground);
 
   &_container {
     display: flex;
