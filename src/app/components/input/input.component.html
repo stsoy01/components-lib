@@ -1,16 +1,16 @@
 <div class="tsInput">
   <input *ngIf="mode === 'default'"
-         class="tsInput__input" 
-         (keyup)="getInputValue($event)" 
+         class="tsInput__input"
+         (keyup)="getInputValue($event)"
          [value]="inputString">
   <input *ngIf="mode === 'password'"
          id="password_field"
          class="tsInput__input hidePassword"
          (keydown)="blockSpace($event)"
-         (keyup)="getInputValue($event)" 
-         [value]="inputString">       
+         (keyup)="getInputValue($event)"
+         [value]="inputString">
   <input *ngIf="mode === 'bank_card'"
-         (keyup)="getInputValue($event)" 
+         (keyup)="getInputValue($event)"
          [value]="inputString"
          class="tsInput__input"
          (keyup)="getInputValue($event, 'bank_card')"
@@ -18,21 +18,21 @@
   <ts-icon *ngIf="mode === 'bank_card' && inputString.length !== 0">
   </ts-icon>
 
-  <span class="tsInput__placeholder" 
-         [ngClass]="inputString ? 'propClass' : ''">
+  <span class="tsInput__placeholder"
+        [ngClass]="inputString ? 'propClass' : ''">
          {{placeholder}}
   </span>
-  <span class="tsInput__close-btn" 
-         *ngIf="inputString.length !== 0" 
-         (click)="clearInoutString()">
+  <span class="tsInput__close-btn"
+        *ngIf="inputString.length !== 0"
+        (click)="clearInoutString()">
   </span>
 
 
-  <span *ngIf="mode === 'password' && clear && inputString"
+  <span *ngIf="mode === 'password' && inputString"
         (mousedown)="showPassword()"
-        (mouseup)="hidePassword()" 
+        (mouseup)="hidePassword()"
         class="tsInput__view-icon">
   </span>
-  
+
 
 </div>

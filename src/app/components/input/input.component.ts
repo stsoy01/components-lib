@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
 import * as e from "express";
 
-type InputTypes = 'bank_card' |'password' | 'email' | 'phone' | 'postal_code' | 'default'
+type InputTypes = 'bank_card' | 'password' | 'email' | 'phone' | 'postal_code' | 'default'
 
 
 @Component({
@@ -12,7 +12,7 @@ type InputTypes = 'bank_card' |'password' | 'email' | 'phone' | 'postal_code' | 
 
 export class InputComponent {
 
-  public inputString: string = ''; 
+  public inputString: string = '';
   public bankName: string = '';
 
   @Input()
@@ -27,10 +27,10 @@ export class InputComponent {
   // General Input Component methods
   /**
    * Getting input value
-   * @param event 
+   * @param event
    */
-  public getInputValue(event: any, type?: string): void {   
-    switch(event.target.value) {
+  public getInputValue(event: any, type?: string): void {
+    switch (event.target.value) {
       case '4':
         this.bankName = 'visa';
         break;
@@ -44,8 +44,8 @@ export class InputComponent {
         this.bankName = 'default';
         break;
     }
-    
-    if(type === 'bank_card') {    
+
+    if (type === 'bank_card') {
       event.target.value = event.target.value.replace(/\D/g, "");
       event.target.value = event.target.value.replace(/^(\d{12})(\d)/gm, "$1-$2");
       event.target.value = event.target.value.replace(/^(\d{8})(\d)/gm, "$1-$2");
@@ -55,10 +55,11 @@ export class InputComponent {
       this.inputString = event.target.value;
       this.onChange.emit(this.inputString)
     }
+    console.log(this.inputString)
   }
 
   /**
-   * 
+   *
    */
   public clearInoutString(): void {
     this.inputString = '';
@@ -67,47 +68,47 @@ export class InputComponent {
 
   // Input exceptions methods
   /**
-   * 
-   * @param event 
-   * @returns 
+   *
+   * @param event
+   * @returns
    */
-  public blockSpace(event: any): void {  
-    if(event.keyCode == 32) {
-      event.returnValue = false;
-      return;
-   }
-  }
-
-  /**
-   * 
-   * @param event 
-   */
-  public checkBankCardDigit(event: any): void {     
-    if(event.which === 8) {   
-      event.returnValue = true;
-      return;
-    } else if(event.which > 57 || this.inputString.length > 18) {
+  public blockSpace(event: any): void {
+    if (event.keyCode == 32) {
       event.returnValue = false;
       return;
     }
-    
+  }
+
+  /**
+   *
+   * @param event
+   */
+  public checkBankCardDigit(event: any): void {
+    if (event.which === 8) {
+      event.returnValue = true;
+      return;
+    } else if (event.which > 57 || this.inputString.length > 18) {
+      event.returnValue = false;
+      return;
+    }
+
   }
 
 
   // Password button methods
   /**
-   * 
+   *
    */
   public showPassword(): void {
     const passwordField = document.getElementById('password_field');
-    passwordField?.classList.add('showPassword')    
+    passwordField?.classList.add('showPassword');
   }
 
   /**
-   * 
+   *
    */
   public hidePassword(): void {
     const passwordField = document.getElementById('password_field');
-    passwordField?.classList.remove('showPassword')    
+    passwordField?.classList.remove('showPassword');
   }
 }

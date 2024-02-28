@@ -76,9 +76,9 @@
     right: 36px;
     width: 20px;
     height: 16px;
-    background-image: url("../../../assets/icons/open-eye.png");
     background-repeat: no-repeat;
     background-size: contain;
+    background-image: var(--password_hide_icon);
     z-index: 11;
   }
 
