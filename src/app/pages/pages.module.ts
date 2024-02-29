@@ -20,11 +20,13 @@ import {ProgressingpageComponent} from "./progressing-page/progressing-page.comp
 import {FieldpageComponent} from "./field-page/field-page.component";
 import { InputpageComponent } from "./input-page/input-page.component";
 import { FieldsetpageComponent } from "./fieldset-page/fieldset-page.component";
+import { FilterpageComponent } from "./filter-page/filter-page.component";
 
 
 
 @NgModule({
   declarations: [
+    FilterpageComponent,
     FieldsetpageComponent,
     InputpageComponent,
     FieldpageComponent,

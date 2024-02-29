@@ -20,4 +20,8 @@ export class DialogComponent {
     dialogWindow!.style.display = "none";
     this.dialogService.id = ''
   }
+
+  public show(): void {
+    console.log('2');
+  }
 }

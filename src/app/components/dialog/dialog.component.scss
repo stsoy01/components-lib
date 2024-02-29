@@ -29,8 +29,7 @@
       height: 30px;
       border-radius: 50%;
       border: none;
-      color: white;
-      background-color: #0000002b;
+      background-color: var(--dialog_close_btn_bgrd);
     }
 
     &__btn::before,
@@ -41,7 +40,7 @@
       left: 14px;
       height: 17px;
       width: 2px;
-      background-color: white;
+      background-color: var(--dialog_close_btn);
     }
 
     &__btn::after {
@@ -54,7 +53,7 @@
 
     &__btn:hover {
       cursor: pointer;
-      background-color: #00000059;
+      background-color: var(--dialog_close_btn_bgrd_hover);
     }
   }
 }

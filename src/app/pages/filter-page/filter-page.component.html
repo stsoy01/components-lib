@@ -1,0 +1,20 @@
+<div class="tsPageContainer">
+  <h2 style="margin-bottom: 5px">{{ "Filter" }}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">
+    {{ "A Component filter data by request conditions" }}
+  </p>
+  <h3 style="margin-bottom: 10px">{{ "Overview" }}</h3>
+
+  <ts-overview
+  [linkList]="['Preview', 'TypeScript', 'HTML']"
+  [ngSwitch]="selectedSection"
+  (selectedSection)="selectedSwitchSection($event)">
+
+  <div *ngSwitchCase="'Preview'">
+    <ts-filter></ts-filter>
+  </div>
+  <div *ngSwitchCase="'TypeScript'">{{'TypeScript'}}</div>
+  <div *ngSwitchCase="'HTML'">{{'HTML'}}</div>
+  
+</ts-overview>
+</div>

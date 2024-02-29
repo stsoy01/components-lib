@@ -18,9 +18,11 @@ import { InputComponent } from "./input/input.component";
 import { IconComponent } from "./icon/icon.component";
 import { IconDirective } from "./icon/icon.directive";
 import { FieldsetComponent } from "./fieldset/fieldset.component";
+import { FilterComponent } from "./filter/filter";
 
 @NgModule({
   declarations: [
+    FilterComponent,
     FieldsetComponent,
     IconDirective,
     IconComponent,
@@ -41,6 +43,7 @@ import { FieldsetComponent } from "./fieldset/fieldset.component";
     SelectComponent
   ],
   exports: [
+    FilterComponent,
     FieldsetComponent,
     IconDirective,
     IconComponent,

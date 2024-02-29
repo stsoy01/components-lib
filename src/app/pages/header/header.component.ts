@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: 'ts-header',
@@ -6,20 +6,26 @@ import {Component} from "@angular/core";
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
   public theme!: any;
 
-  public switchColorTheme(): void {
-    const bodyTheme = document.body.getAttribute('theme')
-    this.theme = bodyTheme;
+  public ngOnInit(): void {
+    this.theme = localStorage.getItem('theme') ?? 'dark'
+    document.body.setAttribute('theme', this.theme);
+  }
 
-    switch (bodyTheme) {
+  public switchColorTheme(): void {   
+    switch (this.theme) {
       case 'dark':
         document.body.setAttribute('theme', 'light');
+        this.theme = 'light';
+        localStorage.setItem('theme', 'light');
         break;
       case 'light':
         document.body.setAttribute('theme', 'dark');
+        this.theme = 'dark';
+        localStorage.setItem('theme', 'dark');
         break;
     }
   }
