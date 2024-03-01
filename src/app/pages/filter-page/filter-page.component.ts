@@ -16,7 +16,8 @@ export class FilterpageComponent {
     {name: 'Samuel', age: 14, gender: 'male', job: 'frontend'},
     {name: 'Kira', age: 55, gender: 'female', job: 'data science'},
     {name: 'Billie ', age: 40, gender: 'female', job: 'python developer'},
-    {name: 'Bob ', age: 44, gender: 'male', job: 'python developer'},
+    {name: 'Bob ', age: 44, gender: 'male', job: 'devops'},
+    {name: 'Jordan ', age: 44, gender: 'male', job: 'project manager'},
     {name: 'Kelly ', age: 50, gender: 'female', job: 'python developer'},
     {name: 'Nika', age: 43, gender: 'female', job: 'HR'},
     {name: 'Mark', age: 37, gender: 'male', job: 'CEO'},
@@ -28,8 +29,10 @@ export class FilterpageComponent {
     {filter: 'frontend', isDisabled: true},
     {filter: 'data science', isDisabled: false},
     {filter: 'HR', isDisabled: false},
+    {filter: 'project manager', isDisabled: false},
     {filter: 'python developer', isDisabled: false},
-    {filter: 'CEO', isDisabled: false},
+    {filter: 'devops', isDisabled: false},
+    {filter: 'CEO', isDisabled: true},
   ]
 
   public selectedSwitchSection(section: string | number): void {
@@ -38,21 +41,18 @@ export class FilterpageComponent {
 
   public getSelectedFilters(data: string[]): void {
     const text = document.getElementsByClassName('itemList');
-    console.log(this.items.length)
-    console.time()
 
+    console.time()
     for (let i = 0; i < this.items.length; i++) {
       if (!data.length) {
         text[i].classList.remove('hide')
       } else if (!Object.values(this.items[i]).includes(data[i])) {
-        // text[i].classList.remove('hide');
         text[i].classList.add('hide');
       }
 
       for (let j = 0; j < data.length; j++) {
         if (Object.values(this.items[i]).includes(data[j])) {
           text[i].classList.remove('hide');
-          // console.log(this.items[i])
         }
       }
     }

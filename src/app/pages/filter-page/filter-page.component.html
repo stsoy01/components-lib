@@ -12,7 +12,7 @@
 
   <div *ngSwitchCase="'Preview'">
     <div style="display: flex;">
-      <div style="margin-right: 50px;">
+      <div style="margin-right: 50px; min-width: 80px;">
         <ul>
           <li *ngFor="let item of items; let i = index" style="color: var(--primary__text)" class="itemList">{{item.name}}</li>
         </ul>
