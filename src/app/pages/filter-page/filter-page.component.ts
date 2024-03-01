@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation} from "@angular/core";
 import {FilterInterface} from "src/shared/types/filter.interface";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
+import {FilterService} from "../../components/filter/filter.service";
 
 @Component({
   selector: 'filter-page',
@@ -35,14 +35,16 @@ export class FilterpageComponent {
     {filter: 'CEO', isDisabled: true},
   ]
 
+  constructor(public service: FilterService) {
+
+  }
+
   public selectedSwitchSection(section: string | number): void {
     this.selectedSection = section;
   }
 
   public getSelectedFilters(data: string[]): void {
     const text = document.getElementsByClassName('itemList');
-
-    console.time()
     for (let i = 0; i < this.items.length; i++) {
       if (!data.length) {
         text[i].classList.remove('hide')
@@ -56,6 +58,5 @@ export class FilterpageComponent {
         }
       }
     }
-    console.timeEnd()
   }
 }
