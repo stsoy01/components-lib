@@ -1,7 +1,7 @@
-<div class="tsFilter" style="display: flex;">
-  <div class="tsFilter__list" *ngFor="let btn of filters">
-    <ts-button class="tsFilter__list__btn" 
-               [appearance]="'primary'"
-               [disabled]="btn?.isDisabled" >{{btn.label}}</ts-button>
-  </div>
-</div>
+<button *ngFor="let btn of filters; let i = index;"
+        (click)="setFilter(btn, i)"
+        [ngClass]="btn.isDisabled ? 'tsFilterBtn--disabled' : ''"
+        [ngStyle]="{'background': selectedFilters.includes(btn.filter) && theme === 'dark' ? 'var(--primary_btn)' :
+        selectedFilters.includes(btn.filter) && theme === 'light' ? '#ececec' : 'var(--filter_btn_background)'}"
+        class="tsFilterBtn">{{btn.filter}}
+</button>

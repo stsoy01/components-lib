@@ -1,5 +1,5 @@
 export interface FilterInterface {
-  label: string;
+  filter: string;
   isDisabled?: boolean;
   icon?: boolean;
 }

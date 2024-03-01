@@ -12,16 +12,18 @@
 
   <div *ngSwitchCase="'Preview'">
     <div style="display: flex;">
-      <div>
+      <div style="margin-right: 50px;">
         <ul>
-          <li *ngFor="let item of items; let i = index">{{item.name}}</li>
+          <li *ngFor="let item of items; let i = index" style="color: var(--primary__text)" class="itemList">{{item.name}}</li>
         </ul>
       </div>
-      <ts-filter [filters]="filterList"></ts-filter>
+      <ts-filter [filters]="filterList"
+                 (onSelect)="getSelectedFilters($event)">
+      </ts-filter>
     </div>
   </div>
   <div *ngSwitchCase="'TypeScript'">{{'TypeScript'}}</div>
   <div *ngSwitchCase="'HTML'">{{'HTML'}}</div>
-  
+
 </ts-overview>
 </div>

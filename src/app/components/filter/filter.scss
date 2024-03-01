@@ -1,14 +1,25 @@
+.tsFilterBtn {
+  padding: 0.65rem 1.5rem;
+  margin: 0 0.25rem 0.25rem 0;
+  background: var(--filter_btn_background);
+  color: var(--primary__text);
+  border-radius: 14px;
+  border: 1px solid var(--filter_btn_background_border);
+  user-select: none;
 
-:host {
-  ::ng-deep {
-    .btn {
-      padding: .5rem 1rem !important;
-      color: white !important;
-      margin-right: 10px !important;
-      
-    }
-    .s {
-      min-width: auto !important;
-    }
+  &--disabled {
+    //background-color: var(--filter_btn_background_disabled) !important;
+    color: #a5a5a5;
+    opacity: 0.56;
   }
+
+}
+
+.tsFilterBtn:hover {
+  cursor: pointer;
+  background: var(--filter_btn_background_hover);
+}
+
+.tsFilterBtn--disabled:hover {
+  cursor: default;
 }

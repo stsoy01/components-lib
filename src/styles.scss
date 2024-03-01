@@ -25,6 +25,9 @@
   --dialog_close_btn_bgrd: #464646ad;
   --dialog_close_btn_bgrd_hover: #2c2c2cad;
   --password_hide_icon: url("http://localhost:4200/light.png");
+  --filter_btn_background: #fff;
+  --filter_btn_background_border: rgb(228 228 228);
+  --filter_btn_background_hover: #ececec;
 
 
 }
@@ -43,8 +46,8 @@
   --border_color: rgba(59, 74, 89);
   --heading_title: rgb(102, 178, 255);
   --accordion_background: #2c2c2c52;
-  --overview_background:  rgb(15, 25, 36);
-  --dialog_background:  rgb(15, 25, 36);
+  --overview_background: rgb(15, 25, 36);
+  --dialog_background: rgb(15, 25, 36);
   --select_background: #1c2432;
   --select_background_hover: rgba(74, 101, 145, 0.24);
   --input_border: rgba(59, 74, 89);
@@ -52,20 +55,10 @@
   --dialog_close_btn_bgrd: #464646ad;
   --dialog_close_btn_bgrd_hover: #605f5fad;
   --password_hide_icon: url("http://localhost:4200/dark.png");
+  --filter_btn_background: rgba(255, 255, 255, .16);
+  --filter_btn_background_border: transparent;
+  --filter_btn_background_hover: rgb(255 255 255 / 29%);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 * {

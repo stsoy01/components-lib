@@ -10,3 +10,11 @@
 .tsPageContainer h2, .tsPageContainer h3 {
   color: var(--primary__text);
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
