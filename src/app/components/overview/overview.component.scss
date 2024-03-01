@@ -1,4 +1,5 @@
 .overview {
+  min-width: 300px;
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 0.125rem 0.1875rem #0000001a;
@@ -32,6 +33,7 @@
     height: fit-content;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    background-color: var(--overview_background)
+    background-color: var(--overview_background);
+    overflow-x: scroll;
   }
 }

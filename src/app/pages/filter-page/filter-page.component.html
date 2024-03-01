@@ -11,7 +11,14 @@
   (selectedSection)="selectedSwitchSection($event)">
 
   <div *ngSwitchCase="'Preview'">
-    <ts-filter></ts-filter>
+    <div style="display: flex;">
+      <div>
+        <ul>
+          <li *ngFor="let item of items; let i = index">{{item.name}}</li>
+        </ul>
+      </div>
+      <ts-filter [filters]="filterList"></ts-filter>
+    </div>
   </div>
   <div *ngSwitchCase="'TypeScript'">{{'TypeScript'}}</div>
   <div *ngSwitchCase="'HTML'">{{'HTML'}}</div>

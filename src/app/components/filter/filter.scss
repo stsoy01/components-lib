@@ -1,0 +1,14 @@
+
+:host {
+  ::ng-deep {
+    .btn {
+      padding: .5rem 1rem !important;
+      color: white !important;
+      margin-right: 10px !important;
+      
+    }
+    .s {
+      min-width: auto !important;
+    }
+  }
+}

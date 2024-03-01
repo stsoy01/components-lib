@@ -1,1 +1,7 @@
-Filter
+<div class="tsFilter" style="display: flex;">
+  <div class="tsFilter__list" *ngFor="let btn of filters">
+    <ts-button class="tsFilter__list__btn" 
+               [appearance]="'primary'"
+               [disabled]="btn?.isDisabled" >{{btn.label}}</ts-button>
+  </div>
+</div>
