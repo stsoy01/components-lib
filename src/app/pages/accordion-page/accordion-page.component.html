@@ -1,28 +1,32 @@
 <div class="tsPageContainer">
-  <h2 style="margin-bottom: 5px;">{{'Accordion'}}</h2>
-  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component for displaying various information in the application.'}}</p>
-  <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
+  <h2 style="margin-bottom: 5px">{{ "Accordion" }}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">
+    {{ "A Component for displaying various information in the application." }}
+  </p>
+  <h3 style="margin-bottom: 10px">{{ "Overview" }}</h3>
 
-  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']" [ngSwitch]="selectedSwitchSection"
-    (selectedSection)="selectSection($event)">
-
-    <div *ngSwitchCase="'Preview'" style="margin-bottom: 40px;">
-      <ts-accordion [data]="content" [rounded]="true">
-      </ts-accordion>
+  <ts-overview
+    [linkList]="['Preview', 'TypeScript', 'HTML']"
+    [ngSwitch]="selectedSwitchSection"
+    (selectedSection)="selectSection($event)"
+  >
+    <div *ngSwitchCase="'Preview'" style="margin-bottom: 40px">
+      <ts-accordion [data]="content" [rounded]="true"> </ts-accordion>
+    </div>
+    <div *ngSwitchCase="'Preview'">
+      <ts-accordion [data]="content2" [rounded]="false"> </ts-accordion>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
-      {{'TypeScript'}}
+      <pre style="color: var(--primary__text)">
+          <code>
+
+          </code>        
+        </pre>
     </div>
 
     <div *ngSwitchCase="'HTML'">
-      {{'HTML'}}
+      {{ "HTML" }}
     </div>
-
-    <div *ngSwitchCase="'Preview'">
-      <ts-accordion [data]="content2" [rounded]="false">
-      </ts-accordion>
-    </div>
-
   </ts-overview>
 </div>

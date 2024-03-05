@@ -1,5 +1,5 @@
 <div *ngFor="let item of data; let i = index" class="ts-accordion" [ngClass]="[(rounded ? 'rounded' : 'not-rounded')]">
-  <ng-content></ng-content>
+  <ng-content [ngClass]="openedSlideIndex === i && isOpened ? 'opened' : 'closed'"></ng-content>
   <div class="ts-accordion_container" (click)="openDescription(i)">
     <h3 >{{item.title}}</h3>
     <span class="ts-accordion_container-arrow" [ngClass]="openedSlideIndex === i && isOpened ? 'rotate' : ''"></span>
