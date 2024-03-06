@@ -11,6 +11,8 @@ import { AccordionData } from "src/app/components/accordion/accordion/accordion.
 export class AccordionpageComponent {
 
   public selectedSwitchSection: number | string = 'Preview'
+
+
   public content: AccordionData[] = [
     {
       title: 'Ellie Williams',

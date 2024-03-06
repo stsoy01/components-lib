@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, ChangeDetectionStrategy} from "@angular/core";
 
 export interface AccordionData {
   title: string;
@@ -8,7 +8,8 @@ export interface AccordionData {
 @Component({
   selector: 'ts-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.scss']
+  styleUrls: ['./accordion.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class AccordionComponent {
