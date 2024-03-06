@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: 'segmented-page',
@@ -11,5 +11,11 @@ export class SegmentedpageComponent {
 
   public getSelectedSection(section: string | number): void {
     this.selectedSwitchSection = section;
+  }
+
+  public getSegment(segment: string): void {
+    setTimeout(() => {
+      alert(segment)
+    }, 1000)
   }
 }

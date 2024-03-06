@@ -7,7 +7,13 @@
                [ngSwitch]="selectedSwitchSection">
 
     <div *ngSwitchCase="'Preview'">
-      <ts-segmented></ts-segmented>
+      <ts-segmented [id]="'it'" 
+                    [class]="'it'"
+                    (onClick)="getSegment($event)"
+                    [segments]="['Frontend','UI/UX','ML','Backend Development']"></ts-segmented>
+      <ts-segmented [id]="'characters'"
+                    [class]="'characters'"
+                    [segments]="['Robin','Rachel', 'Riley Abel']"></ts-segmented>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">
