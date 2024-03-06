@@ -16,6 +16,7 @@ import {FieldpageComponent} from "./pages/field-page/field-page.component";
 import { InputpageComponent } from './pages/input-page/input-page.component';
 import { FieldsetpageComponent } from './pages/fieldset-page/fieldset-page.component';
 import { FilterpageComponent } from './pages/filter-page/filter-page.component';
+import {NotificationpageComponent} from "./pages/notification-page/notification-page.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/accordion', pathMatch: 'full'},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'segmented', component: SegmentedpageComponent},
   {path: 'progressing', component: ProgressingpageComponent},
   {path: 'input', component: InputpageComponent},
+  {path: 'notification', component: NotificationpageComponent},
   {path: 'fieldset', component: FieldsetpageComponent},
   {path: 'dialog', component: DialogpageComponent},
   {path: 'dropdown', component: DropdownpageComponent},

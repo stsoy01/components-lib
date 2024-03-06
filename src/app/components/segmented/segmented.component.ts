@@ -1,4 +1,12 @@
-import {AfterViewInit, Component, Input, Output, EventEmitter, ViewChild, ElementRef} from "@angular/core";
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef
+} from "@angular/core";
 
 
 @Component({
@@ -20,10 +28,12 @@ export class SegmentedComponent implements AfterViewInit {
   public background: ElementRef | undefined;
   @ViewChild('segment')
   public segment: ElementRef | undefined;
-
   public leftOffset!: number;
   public elementWidth!: number;
 
+  /**
+   * Identify segment`s background position and width
+   */
   public ngAfterViewInit(): void {
     const firstElement = this.segment!.nativeElement;
 
@@ -32,15 +42,16 @@ export class SegmentedComponent implements AfterViewInit {
     this.background!.nativeElement.style.width = `${firstElement.clientWidth - 10}px`;
   }
 
+  /**
+   * Set segment`s background position and Data sharing
+   * @param segment
+   * @param value
+   */
   public setSegmentBackground(segment: any, value: string): void {
     this.leftOffset = segment.target.offsetLeft + 5;
     this.elementWidth = segment.target.clientWidth - 10
-    //
     this.background!.nativeElement.style.left = `${this.leftOffset}px`
     this.background!.nativeElement.style.width = `${this.elementWidth}px`
     this.onClick.emit(value)
-
-
   }
-
 }

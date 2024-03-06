@@ -1,0 +1,22 @@
+<div class="tsPageContainer">
+  <h2 style="margin-bottom: 5px;">{{'Notification'}}</h2>
+  <p style="font-size: 11px; margin-bottom: 35px; color: #828282">{{'A Component that shows status of page events'}}</p>
+  <h3 style="margin-bottom: 10px;">{{'Overview'}}</h3>
+  <ts-overview [linkList]="['Preview', 'TypeScript', 'HTML']"
+               (selectedSection)="getSelectedSection($event)"
+               [ngSwitch]="selectedSwitchSection">
+
+    <div *ngSwitchCase="'Preview'">
+    <ts-notification></ts-notification>
+    </div>
+
+    <div *ngSwitchCase="'TypeScript'">
+      {{'TypeScript'}}
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      {{'HTML'}}
+    </div>
+
+  </ts-overview>
+</div>

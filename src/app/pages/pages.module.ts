@@ -21,11 +21,13 @@ import {FieldpageComponent} from "./field-page/field-page.component";
 import { InputpageComponent } from "./input-page/input-page.component";
 import { FieldsetpageComponent } from "./fieldset-page/fieldset-page.component";
 import { FilterpageComponent } from "./filter-page/filter-page.component";
+import {NotificationpageComponent} from "./notification-page/notification-page.component";
 
 
 
 @NgModule({
   declarations: [
+    NotificationpageComponent,
     FilterpageComponent,
     FieldsetpageComponent,
     InputpageComponent,
