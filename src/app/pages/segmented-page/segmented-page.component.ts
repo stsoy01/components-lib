@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import {Component} from "@angular/core";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'segmented-page',
@@ -7,6 +8,9 @@ import { Component } from "@angular/core";
 })
 
 export class SegmentedpageComponent {
+  constructor(private router: Router) {
+  }
+
   public selectedSwitchSection: string | number = 'Preview'
 
   public getSelectedSection(section: string | number): void {
@@ -14,8 +18,6 @@ export class SegmentedpageComponent {
   }
 
   public getSegment(segment: string): void {
-    setTimeout(() => {
-      alert(segment)
-    }, 1000)
+    this.router.navigateByUrl(segment.toLowerCase().split(' ').join('')).then()
   }
 }

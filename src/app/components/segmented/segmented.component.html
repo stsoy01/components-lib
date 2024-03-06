@@ -1,10 +1,10 @@
-<div class="tsSegment {{this.class}}">
-  <button
-    *ngFor="let segment of segments"
-    class="tsSegment__segment"
-    (click)="setSegmentBackground($event, segment)"
+<div class="tsSegment">
+  <button #segment
+          *ngFor="let segment of segments"
+          class="tsSegment__segment"
+          (click)="setSegmentBackground($event, segment)"
   >
     {{ segment }}
   </button>
-  <span class="tsSegment__background" id="{{ id }}"></span>
+  <span class="tsSegment__background" #background></span>
 </div>
