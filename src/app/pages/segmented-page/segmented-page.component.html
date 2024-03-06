@@ -7,7 +7,8 @@
                [ngSwitch]="selectedSwitchSection">
 
     <div *ngSwitchCase="'Preview'">
-      <ts-segmented [segments]="['Accordion','Calendar','Select','Elastic Container']"></ts-segmented>
+      <ts-segmented [segments]="['Accordion','Calendar','Select','Elastic Container']"
+                    (onClick)="getSegment($event)"></ts-segmented>
       <ts-segmented [segments]="['Robin','Rachel', 'Riley Abel']"></ts-segmented>
     </div>
 
