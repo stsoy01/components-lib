@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {NotificationService} from "../../pages/notification-page/notification-service";
 
 @Component({
   selector: 'ts-notification',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent {
+
+  constructor(public notifyService: NotificationService) {
+  }
+
 
 }

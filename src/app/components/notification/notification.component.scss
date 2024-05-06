@@ -1,0 +1,25 @@
+.tsNotification {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  min-width: 400px;
+  max-width: 400px;
+
+  &__item {
+    position: relative;
+    right: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #246EA9;
+    border-radius: 8px;
+  }
+}
+
+.hide {
+  color: black;
+}
+
+.show {
+  right: -411px;
+  transition: .4s;
+}

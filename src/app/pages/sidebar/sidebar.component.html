@@ -27,6 +27,7 @@
 
   <div [ngSwitch]="section" class="tsSidebar_rightbox" style="width: 100%; max-height: 100vh; overflow-y: auto;">
     <ts-header></ts-header>
+    <ts-notification *ngIf="notifyService.notifyList.length"></ts-notification>
     <router-outlet></router-outlet>
   </div>
 </div>

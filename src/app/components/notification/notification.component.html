@@ -1,1 +1,6 @@
-<p>notification works!</p>
+<div class="tsNotification" *ngIf="notifyService.notifyList.length">
+  <div [ngClass]="i === 0 && notifyService.isHidden ? 'show' : 'hide'"
+       class="tsNotification__item" *ngFor="let notify of notifyService.notifyList; let i = index">
+    <h4>{{notify?.title}}</h4>
+  </div>
+</div>

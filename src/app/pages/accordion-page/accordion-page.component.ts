@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { AccordionData } from "src/app/components/accordion/accordion/accordion.component";
+import {NotificationService} from "../notification-page/notification-service";
 
 
 @Component({
@@ -9,6 +10,9 @@ import { AccordionData } from "src/app/components/accordion/accordion/accordion.
 })
 
 export class AccordionpageComponent {
+
+  constructor(private notifyService: NotificationService) {
+  }
 
 
   public selectedSwitchSection: number | string = 'Preview'
@@ -59,5 +63,11 @@ export class AccordionpageComponent {
 
   public selectSection(section: string | number): void {
     this.selectedSwitchSection = section;
+  }
+
+  public showNotify(): void {
+    this.notifyService.open({
+      title: 'Accordion'
+    })
   }
 }

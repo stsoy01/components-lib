@@ -7,7 +7,7 @@
                [ngSwitch]="selectedSwitchSection">
 
     <div *ngSwitchCase="'Preview'">
-    <ts-notification></ts-notification>
+      <ts-button [appearance]="'accent'" (click)="showNotification()">{{'Random "The Last of Us" quotes'}}</ts-button>
     </div>
 
     <div *ngSwitchCase="'TypeScript'">

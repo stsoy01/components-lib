@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import {NotificationService} from "../notification-page/notification-service";
 
 
 
@@ -12,14 +13,16 @@ type SwitcCases = string;
 })
 
 export class SidebarComponent {
-
   public eCData = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ';
 
   public section: SwitcCases = 'container';
 
   public switchSection: string | number = 'Preview';
 
- 
+  constructor(public notifyService: NotificationService) {
+  }
+
+
   public switchDarkMode(): void {
     document.body.classList.toggle('dark-theme')
   }
@@ -32,7 +35,7 @@ export class SidebarComponent {
     console.log(selectedValue)
   }
 
- 
+
 
   public isHired(data: any): void {
     console.log(data);

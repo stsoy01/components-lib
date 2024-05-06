@@ -23,8 +23,10 @@ export class AccordionComponent {
   public openedSlideIndex: number | undefined;
   public isOpened: boolean = false;
 
+  // @HostListener('click')
   public openDescription(index: number): void {
     const lastRounded = document.getElementsByClassName('lastRounded');
+    console.log('2')
     document.getElementsByClassName('lastRounded')[lastRounded.length - 1].classList.add('lastRoundedAdd')
 
     if (this.openedSlideIndex !== index) {
