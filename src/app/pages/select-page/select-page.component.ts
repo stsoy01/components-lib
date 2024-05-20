@@ -15,6 +15,12 @@ export class SelectpageComponent {
   }
 
   public getSelectedValue(value: any): void {
+    console.log(value)
+    localStorage.setItem('placeholder', value?.label)
     this.selectedValue = value?.label;
+  }
+
+  public getValue(): string {
+    return localStorage.getItem('placeholder') ?? 'Choose country'
   }
 }

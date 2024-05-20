@@ -12,7 +12,7 @@
       <ts-select
         [title]="'Countries'"
         (onSelect)="getSelectedValue($event)"
-        [placeholder]="'Choose country'"
+        [placeholder]="getValue()"
         [dropdownList]="[{label: 'Germany', value: 1},{label: 'Spain', value: 2},{label: 'Greece', value: 3}]">
       </ts-select>
 

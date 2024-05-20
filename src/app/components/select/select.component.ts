@@ -32,7 +32,6 @@ export class SelectComponent {
     if (item?.label) {
       this.placeholder = item?.label;
       this.onSelect.emit(item)
-
     }
     this.isDropdownShowed = !this.isDropdownShowed
   }

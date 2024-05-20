@@ -8,7 +8,7 @@
     </div>
     <div class="tsSelect__select--btn" [ngStyle]="{'transform': isDropdownShowed ? 'rotate(45deg)' : ''}"></div>
   </div>
-  <div class="tsSelect__dropdown" #itemList
+  <div class="tsSelect__dropdown"
        [ngClass]="!isDropdownShowed ? 'tsSelect__dropdown--hidden' : 'tsSelect__dropdown--showed'">
     <ul *ngIf="dropdownList.length && isDropdownShowed; else noDropdownData" style="padding: 4px 6px">
       <li *ngFor="let item of dropdownList; let i = index"

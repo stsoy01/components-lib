@@ -5,6 +5,8 @@ type NotificationObject = {
   message?: string
 }
 
+type NotificationType = 'warning' | 'error' | 'success';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -40,13 +42,8 @@ export class NotificationService {
     // this.isHidden = true;
     setTimeout(() => {
       this.isHidden = true;
-
-      setTimeout(() => {
-        this.notifyList.shift();
-
-      }, 10)
-
-    }, 3500)
+      this.notifyList.shift();
+    }, 3000)
 
 
   }
