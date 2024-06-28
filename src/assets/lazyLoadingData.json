@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Luca",
+    "email": "luca@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 2,
+    "name": "Lilly",
+    "email": "lilly@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 3,
+    "name": "Anna",
+    "email": "anna@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 4,
+    "name": "John",
+    "email": "john@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 5,
+    "name": "Mary",
+    "email": "mary@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 6,
+    "name": "Alex",
+    "email": "alex@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 7,
+    "name": "Tom",
+    "email": "tom@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 8,
+    "name": "Kate",
+    "email": "kate@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 9,
+    "name": "Bob",
+    "email": "bob@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 10,
+    "name": "Mary Anne",
+    "email": "maryanne@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 11,
+    "name": "Ham",
+    "email": "ham@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 12,
+    "name": "Lilly",
+    "email": "lilly@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 13,
+    "name": "Nina",
+    "email": "nina@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 14,
+    "name": "Konstantin",
+    "email": "konstantin@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 15,
+    "name": "Rachel",
+    "email": "rachel@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 16,
+    "name": "Adam",
+    "email": "adam@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 17,
+    "name": "Lucy",
+    "email": "lucy_u@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 18,
+    "name": "Bella",
+    "email": "bella@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 19,
+    "name": "Yanix",
+    "email": "yanix@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 20,
+    "name": "Tom",
+    "email": "tom@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 21,
+    "name": "George",
+    "email": "g_1@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 22,
+    "name": "Kelly",
+    "email": "k_ellu1@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 23,
+    "name": "Anna",
+    "email": "anna@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 24,
+    "name": "John",
+    "email": "john@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 25,
+    "name": "Mary",
+    "email": "mary@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 26,
+    "name": "Luca",
+    "email": "luca@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 27,
+    "name": "Lilly",
+    "email": "lilly@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 28,
+    "name": "Mikkie",
+    "email": "mikkie_Ds@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 29,
+    "name": "Michael",
+    "email": "michael_99@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 30,
+    "name": "Maria",
+    "email": "ma_d2212dDF@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 31,
+    "name": "Lil_pimp",
+    "email": "lp2@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 32,
+    "name": "Samorost",
+    "email": "2dasdD@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 33,
+    "name": "Drake Michel",
+    "email": "aasd___2@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 34,
+    "name": "R Kelly",
+    "email": "R_leeek@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 35,
+    "name": "Sergey",
+    "email": "s@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 36,
+    "name": "Evgeniy",
+    "email": "evg@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 37,
+    "name": "Nikita",
+    "email": "nikita@gmail.com",
+    "gender": "female"
+  },
+  {
+    "id": 38,
+    "name": "Anton",
+    "email": "an_onme@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 39,
+    "name": "Peter",
+    "email": "pter_1theGreat@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": 40,
+    "name": "Fame",
+    "email": "fame@gmail.com",
+    "gender": "female"
+  }
+]

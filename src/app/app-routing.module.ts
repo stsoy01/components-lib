@@ -17,6 +17,7 @@ import { InputpageComponent } from './pages/input-page/input-page.component';
 import { FieldsetpageComponent } from './pages/fieldset-page/fieldset-page.component';
 import { FilterpageComponent } from './pages/filter-page/filter-page.component';
 import {NotificationpageComponent} from "./pages/notification-page/notification-page.component";
+import {LazyLoadingPage} from "./pages/lazy-loading-page/lazy-loading-page";
 
 const routes: Routes = [
   {path: '', redirectTo: '/accordion', pathMatch: 'full'},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path: 'blockstatus', component: BlockstatuspageComponent},
   {path: 'tag', component: TagpageComponent},
   {path: 'filter', component: FilterpageComponent},
+  {path: 'lazyloading', component: LazyLoadingPage},
   {path: '**', component: ButtonpageComponent},
 ]
 
