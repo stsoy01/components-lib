@@ -1,6 +1,5 @@
-import {Component} from "@angular/core";
+import {Component, OnInit, HostListener} from "@angular/core";
 import {LazyLoadingService} from "./lazyLoadingService";
-import * as lazyData from '../../../assets/lazyLoadingData.json'
 
 @Component({
   selector: 'ts-lazy-loading',
@@ -8,13 +7,23 @@ import * as lazyData from '../../../assets/lazyLoadingData.json'
   styleUrls: ['./lazy-loading.scss']
 })
 
-export class LazyLoading {
+export class LazyLoading implements OnInit {
   public payloadInformation: any[] = [];
 
   constructor(private lazyLoadService: LazyLoadingService) {
   }
 
-  public async onScroll(data: any): Promise<void> {
+  @HostListener('scroll')
+  public scrolling(e: any): void {
+    console.log(e.target.scrollTop)
+
+  }
+
+  public ngOnInit() {
+    this.onScroll().then()
+  }
+
+  public async onScroll(): Promise<void> {
     const lazy = await this.lazyLoadService.getData('../../../assets/lazyLoadingData.json')
     this.payloadInformation = lazy;
     console.log(this.payloadInformation)

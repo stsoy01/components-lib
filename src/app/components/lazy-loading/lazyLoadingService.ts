@@ -6,20 +6,19 @@ import {Injectable} from "@angular/core";
 
 export class LazyLoadingService {
 
+  public key: string = '44be32770cd546ccabbd5f7a834c22f5'
+
   public getData(url: string): Promise<any> {
     return new Promise((res, rej) => {
       try {
-        const data = fetch(url)
+        fetch(`https://rawg.io/api/games?page=1&page_size=10&key=${this.key}`)
           .then(res => res.json())
-        setTimeout(() => {
-          res(data)
-        }, 150)
+          .then(data => {
+            res(data.results)
+          })
       } catch (e) {
-
+        rej(e)
       }
     })
-
-
   }
-
 }
