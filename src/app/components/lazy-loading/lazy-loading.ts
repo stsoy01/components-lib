@@ -10,6 +10,7 @@ import { LazyLoadingService } from "./lazyLoadingService";
 export class LazyLoading implements OnInit {
   public payloadInformation: any[] = [];
   public pageNumber: number = 1;
+  public isLoading: boolean = true;
 
   constructor(private lazyLoadService: LazyLoadingService) {
   }
@@ -26,10 +27,10 @@ export class LazyLoading implements OnInit {
   }
 
   public async onScroll(pageNumber: number): Promise<void> {
+    this.isLoading = true;
     const lazy = await this.lazyLoadService.getData(this.pageNumber)
     this.payloadInformation.push(lazy)
-    console.log(this.payloadInformation);
-    
+    this.isLoading = false;
   }
 
 }
