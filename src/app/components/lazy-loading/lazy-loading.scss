@@ -1,24 +1,23 @@
 .lazyLoading {
-  outline: 1px solid white;
-  color: white;
-  padding: 10px;
+  max-height: 500px;
   min-height: 500px;
-  max-height: 600px;
+  padding: 10px;
   overflow-y: auto;
   scrollbar-width: none;
+  color: white;
 }
 
-.user {
+.game {
   display: flex;
   padding: 10px;
-  border-radius: 8px;
-  width: 474px;
+  margin-bottom: 50px;
+  width: 401px;
   margin-left: auto;
   margin-right: auto;
-  height: 497px;
+  height: 357px;
   flex-direction: column;
   justify-content: space-between;
   background-repeat: no-repeat;
   background-size: 100% 64%;
-  margin-bottom: 50px;
+  border-radius: 8px;
 }

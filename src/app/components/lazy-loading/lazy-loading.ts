@@ -9,24 +9,28 @@ import {LazyLoadingService} from "./lazyLoadingService";
 
 export class LazyLoading implements OnInit {
   public payloadInformation: any[] = [];
+  public pageNumber: number = 1;
+  public isLoading: boolean = true;
 
   constructor(private lazyLoadService: LazyLoadingService) {
   }
 
   @HostListener('scroll')
   public scrolling(e: any): void {
-    console.log(e.target.scrollTop)
-
+    if (e.target.scrollTop + e.target.clientHeight >= e.target.scrollHeight) {
+      this.onScroll(this.pageNumber++).then()
+    }
   }
 
   public ngOnInit() {
-    this.onScroll().then()
+    this.onScroll(this.pageNumber).then()
   }
 
-  public async onScroll(): Promise<void> {
-    const lazy = await this.lazyLoadService.getData('../../../assets/lazyLoadingData.json')
-    this.payloadInformation = lazy;
-    console.log(this.payloadInformation)
+  public async onScroll(pageNumber: number): Promise<void> {
+    this.isLoading = true;
+    const lazy = await this.lazyLoadService.getData(this.pageNumber)
+    this.payloadInformation.push(lazy)
+    this.isLoading = false;
   }
 
 }
