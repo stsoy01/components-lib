@@ -23,10 +23,12 @@ import {FieldsetpageComponent} from "./fieldset-page/fieldset-page.component";
 import {FilterpageComponent} from "./filter-page/filter-page.component";
 import {NotificationpageComponent} from "./notification-page/notification-page.component";
 import {LazyLoadingPage} from "./lazy-loading-page/lazy-loading-page";
+import { I18n } from "src/shared/pipes/i18n.pipe";
 
 
 @NgModule({
   declarations: [
+    I18n,
     LazyLoadingPage,
     NotificationpageComponent,
     FilterpageComponent,

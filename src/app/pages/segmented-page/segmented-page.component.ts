@@ -18,6 +18,6 @@ export class SegmentedpageComponent {
   }
 
   public getSegment(segment: string): void {
-    this.router.navigateByUrl(segment.toLowerCase().split(' ').join('')).then()
+    this.router.navigateByUrl(segment.toLowerCase().split(' ').join(''));
   }
 }

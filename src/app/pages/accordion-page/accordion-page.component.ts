@@ -1,17 +1,19 @@
 import { Component } from "@angular/core";
 import { AccordionData } from "src/app/components/accordion/accordion/accordion.component";
-import {NotificationService} from "../notification-page/notification-service";
+import { NotificationService } from "../notification-page/notification-service";
+
 
 
 @Component({
   selector: 'accordion-page',
   templateUrl: './accordion-page.component.html',
-  styleUrls: ['./accordion-page.component.scss']
+  styleUrls: ['./accordion-page.component.scss'],
 })
 
 export class AccordionpageComponent {
 
-  constructor(private notifyService: NotificationService) {
+  constructor(private notifyService: NotificationService,
+  ) {
   }
 
 
