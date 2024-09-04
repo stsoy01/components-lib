@@ -19,14 +19,12 @@ import {IconComponent} from "./icon/icon.component";
 import {IconDirective} from "./icon/icon.directive";
 import {FieldsetComponent} from "./fieldset/fieldset.component";
 import {FilterComponent} from "./filter/filter";
-import {NotificationComponent} from "./notification/notification.component";
 import {LazyLoading} from "./lazy-loading/lazy-loading";
 
 
 @NgModule({
   declarations: [
     LazyLoading,
-    NotificationComponent,
     FilterComponent,
     FieldsetComponent,
     IconDirective,
@@ -49,7 +47,6 @@ import {LazyLoading} from "./lazy-loading/lazy-loading";
   ],
   exports: [
     LazyLoading,
-    NotificationComponent,
     FilterComponent,
     FieldsetComponent,
     IconDirective,
