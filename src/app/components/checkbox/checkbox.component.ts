@@ -1,10 +1,15 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  Input, Output
+} from "@angular/core";
 
 
 @Component({
-  selector: 'ts-checkbox',
+  selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  styleUrls: ['./checkbox.component.scss'],
+  standalone: true
 })
 
 export class CheckboxComponent {
@@ -12,12 +17,16 @@ export class CheckboxComponent {
   public label: string = '';
 
   @Input()
-  public disabled!: boolean;
+  public disabled: boolean = false;
+  @Input()
+  public is_checked: boolean = false;
 
   @Output()
-  public onChecked: EventEmitter<any> = new EventEmitter<any>()
+  public getValue: EventEmitter<boolean> = new EventEmitter<boolean>()
 
-  public getCheckBox(data: any): void {
-    this.onChecked.emit(data.target.checked)
+  public __isChecked(val: boolean): void {
+    if(this.disabled) return
+    this.is_checked = !val;
+    this.getValue.emit(this.is_checked)
   }
 }
