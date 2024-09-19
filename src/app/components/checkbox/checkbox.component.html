@@ -1,9 +1,10 @@
-<div>
-  <label class="checkbox">{{label}}
-    <input type="checkbox" disabled={{disabled}} (click)="getCheckBox($event)">
-    <span class="checkbox__markedElement"></span>
-  </label>
-  <span style="display: inline-block; margin-left: 30px">
-    <ng-content></ng-content>
-  </span>
+<div class="checkbox">
+  <div class="checkbox__container"
+       (click)="__isChecked(is_checked)"
+       [class.checkbox__container--disabled]="disabled">
+    <div class="checkbox__container__input">
+      <div [class.checkbox__container__input--mask]="is_checked"></div>
+    </div>
+    <span class="checkbox__container__content"><ng-content></ng-content></span>
+  </div>
 </div>
