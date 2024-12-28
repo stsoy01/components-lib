@@ -39,7 +39,6 @@ import {LazyLoading} from "./lazy-loading/lazy-loading";
     OverviewCompomponent,
     ElasticContainerComponent,
     DialogComponent,
-    CheckboxComponent,
     ButtonComponent,
     AccordionComponent,
     CalendarComponent,
@@ -67,7 +66,7 @@ import {LazyLoading} from "./lazy-loading/lazy-loading";
     CheckboxComponent,
     CalendarComponent
   ],
-  imports: [CommonModule]
+  imports: [CommonModule, CheckboxComponent]
 })
 
 export class ComponentsModule {

@@ -1,4 +1,4 @@
-import {Component, Input, ChangeDetectionStrategy} from "@angular/core";
+import {Component, Input, ChangeDetectionStrategy, OnDestroy} from "@angular/core";
 
 export interface AccordionData {
   title: string;
@@ -12,7 +12,7 @@ export interface AccordionData {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class AccordionComponent {
+export class AccordionComponent implements OnDestroy{
 
   @Input()
   public data: AccordionData[] = []
@@ -22,12 +22,12 @@ export class AccordionComponent {
 
   public openedSlideIndex: number | undefined;
   public isOpened: boolean = false;
+  public lastRounded!: any;
 
   // @HostListener('click')
   public openDescription(index: number): void {
-    const lastRounded = document.getElementsByClassName('lastRounded');
-    console.log('2')
-    document.getElementsByClassName('lastRounded')[lastRounded.length - 1].classList.add('lastRoundedAdd')
+    this.lastRounded = document.getElementsByClassName('lastRounded');
+    document.getElementsByClassName('lastRounded')[this.lastRounded.length - 1].classList.add('lastRoundedAdd')
 
     if (this.openedSlideIndex !== index) {
       this.openedSlideIndex = index;
@@ -36,6 +36,10 @@ export class AccordionComponent {
       this.isOpened = !this.isOpened
       this.openedSlideIndex = undefined;
     }
+  }
+
+  public ngOnDestroy(): void {
+    this.lastRounded.parentNode.removeChild(this.lastRounded);
   }
 
 }
